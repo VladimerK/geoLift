@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="radioHeight">50dp</dimen>
+    <dimen name="images">35dp</dimen>
+    <dimen name="logoSize">60dp</dimen>
+    <dimen name="logoSizeH">65dp</dimen>
+    <dimen name="gamodzexbaBtn">230dp</dimen>
+    <dimen name="gamodzexbaBtnHeight">80dp</dimen>
+</resources>

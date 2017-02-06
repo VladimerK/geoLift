@@ -1,0 +1,266 @@
+<!--<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_how_topay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:background="#172027"
+    tools:context="ge.idevelopers.Lifti.app.HowTopay">
+
+
+</RelativeLayout>--><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/DrawerLayout3"
+    android:layout_width="match_parent"
+    android:background="#3e4250"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#3e4250"
+            android:gravity="right"
+            android:id="@+id/bgView3"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/crash_conta_rules"
+                app:layout_heightPercent="10%"
+                android:layout_width="250dp"
+                android:layout_marginTop="50dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/crashcaicon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:text="ავარიული გამოძახება"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/about_us_rules"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/crash_conta_rules"
+                android:orientation="horizontal"
+                app:layout_heightPercent="10%"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="30dp"
+                    android:src="@drawable/aboutus" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    android:text="ჩვენს შესახებ"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lift_savefty_rules"
+                android:layout_width="250dp"
+                app:layout_heightPercent="10%"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/about_us_rules"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="30dp"
+                    android:src="@drawable/savefty" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    android:text="ლიფტის უსაფრთხოება"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/how_pay_rules"
+                app:layout_heightPercent="10%"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lift_savefty_rules"
+                android:orientation="horizontal"
+                android:background="#82000000"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/howtopay" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:text="როგორ გადავიხადო"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/partners_rules"
+                android:layout_width="250dp"
+                app:layout_heightPercent="10%"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/how_pay_rules"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="30dp"
+                    android:src="@drawable/partners" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    android:text="პარტნიორები"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#111f41"
+            android:orientation="horizontal"
+            android:visibility="visible">
+            <ImageView
+                android:layout_width="@dimen/logoSize"
+                android:layout_height="@dimen/logoSizeH"
+                android:src="@drawable/logocopy"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="მალე..."
+                android:textColor="#FFF"
+                android:gravity="center_horizontal|center_vertical"
+                />
+
+            <RelativeLayout
+                android:id="@+id/humburger_main3"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true">
+
+                <LinearLayout
+                    android:id="@+id/humburger_33"
+                    android:layout_width="30dp"
+                    android:layout_height="5dp"
+                    android:background="#ffff"
+                    android:orientation="horizontal" />
+
+
+                <LinearLayout
+                    android:id="@+id/humburger_13"
+                    android:layout_width="30dp"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/humburger_33"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffff"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/humburger_23"
+                    android:layout_width="30dp"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/humburger_33"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffff"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/humburger_43"
+                    android:layout_width="30dp"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/humburger_23"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffff"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/RecyclerView3"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="#00ff0000"
+                android:orientation="horizontal"
+                android:scrollbars="vertical">
+
+            </LinearLayout>
+
+            <!--kodi-->
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+

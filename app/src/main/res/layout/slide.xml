@@ -1,0 +1,420 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/DrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3e4250"
+        >
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#3e4250"
+            android:gravity="right"
+            android:visibility="gone"
+            android:id="@+id/bgView"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/crash_conta"
+                app:layout_heightPercent="10%"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp"
+                android:background="#82000000"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/crashcaicon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:text="ავარიული გამოძახება"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/about_us"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/crash_conta"
+                android:orientation="horizontal"
+                app:layout_heightPercent="10%"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="30dp"
+                    android:src="@drawable/aboutus" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:text="ჩვენს შესახებ"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lift_savefty"
+                android:layout_width="250dp"
+                app:layout_heightPercent="10%"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/about_us"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="30dp"
+                    android:src="@drawable/savefty" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:text="ლიფტის უსაფრთხოება"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/how_pay"
+                app:layout_heightPercent="10%"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lift_savefty"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/howtopay" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:text="როგორ გადავიხადო"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/partners"
+                android:layout_width="250dp"
+                app:layout_heightPercent="10%"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/how_pay"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="30dp"
+                    android:src="@drawable/partners" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:text="პარტნიორები"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/liftback"
+            android:visibility="visible">
+            <LinearLayout
+                android:id="@+id/activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                tools:context="ge.idevelopers.Lifti.app.MainActivity">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginLeft="6dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/logoSize"
+                        android:layout_height="@dimen/logoSizeH"
+                        android:background="@drawable/logocopy"
+                        android:padding="2dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="ლიფტის ნომერი"
+                        android:textColor="#FFF"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="16dp"
+
+                    android:layout_weight="0.3"
+                    android:background="@drawable/textbackgroun"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivCal2"
+                        android:layout_width="@dimen/images"
+                        android:layout_height="@dimen/images"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/lifticon" />
+
+                    <EditText
+                        android:id="@+id/etInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:paddingLeft="2dp"
+                        android:background="@null"
+
+                        android:gravity="start"
+                        android:inputType="numberSigned"
+                        android:maxLength="3"
+                        android:textColor="#000"
+                        android:textSize="25dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="შეიყვანეთ თქვენი ნომერი"
+                        android:textColor="#FFF"
+                        android:textSize="20dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llInputNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/textbackgroun"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivCal"
+                        android:layout_width="@dimen/images"
+                        android:layout_height="@dimen/images"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/phoneicon" />
+
+                    <EditText
+                        android:id="@+id/etInputNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="start"
+                        android:inputType="numberSigned"
+                        android:maxLength="9"
+                        android:paddingRight="35dp"
+                        android:paddingLeft="2dp"
+                        android:textColor="#000"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="გამოძახების მიზეზი"
+                        android:textColor="#FFF"
+                        android:textSize="20dp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mizezi"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="16dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <ge.idevelopers.Lifti.app.slider.Slider
+                        android:id="@+id/asd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:BackgroundColor="#ffffff"
+                        custom:BackgroundPadding="1dp"
+                        custom:ProgressColor="#0893c2"
+                        custom:Radius="25dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnGamodzaxeba"
+                        android:layout_width="@dimen/gamodzexbaBtn"
+                        android:layout_height="@dimen/gamodzexbaBtnHeight"
+                        android:background="@drawable/callservicbtn"
+                        android:gravity="center"
+                        android:onClick="gamodzaxeba"
+                        android:text="გამოძახება"
+                        android:textColor="#FFF" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/humburger_main"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true">
+
+                <LinearLayout
+                    android:id="@+id/humburger_3"
+                    android:layout_width="30dp"
+                    android:layout_height="5dp"
+                    android:background="#ffff"
+                    android:orientation="horizontal" />
+
+
+                <LinearLayout
+                    android:id="@+id/humburger_1"
+                    android:layout_width="30dp"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/humburger_3"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffff"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/humburger_2"
+                    android:layout_width="30dp"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/humburger_3"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffff"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/humburger_4"
+                    android:layout_width="30dp"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/humburger_2"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffff"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/RecyclerView"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="#00ff0000"
+                android:orientation="horizontal"
+                android:scrollbars="vertical">
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
