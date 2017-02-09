@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GeoLift</string>
+    <string name="app_name">TbilisiLift</string>
     <string name="left_button_text">LEFT</string>
     <string name="right_button_text">Right</string>
     <string name="preferences_key">ge.idevelopers.Lift.app</string>

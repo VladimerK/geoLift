@@ -4,6 +4,8 @@ import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
@@ -96,8 +98,12 @@ public class Slider extends LinearLayout {
         slideImage.setImageResource(R.drawable.lift_broken);
 
         sliderTExt=new TextView(context);
-        sliderTExt.setTextSize(10);
+        sliderTExt.setTextSize(9);
         sliderTExt.setText("ლიფტი დაზიანებულია");
+        sliderTExt.setTextColor(Color.WHITE);
+        Typeface type = Typeface.createFromAsset(context.getAssets(),"bpgphonesans.ttf");
+        sliderTExt.setTypeface(type);
+
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.RoundCornerProgress);
 
@@ -124,6 +130,9 @@ public class Slider extends LinearLayout {
         final TextView textView2= (TextView) findViewById(R.id.text_2);
         final ImageView imageView1= (ImageView) findViewById(R.id.image_1);
         final ImageView imageView2= (ImageView) findViewById(R.id.image_2);
+        Typeface type = Typeface.createFromAsset(context.getAssets(),"bpgphonesans.ttf");
+        textView1.setTypeface(type);
+        textView2.setTypeface(type);
         progressLinear=new LinearLayout(context);
 
         int k=(imageView1.getLayoutParams().height);

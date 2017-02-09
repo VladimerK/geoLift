@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="radioHeight">35dp</dimen>
-    <dimen name="images">25dp</dimen>
+    <dimen name="images">20dp</dimen>
     <dimen name="logoSize">45dp</dimen>
     <dimen name="logoSizeH">50dp</dimen>
     <dimen name="gamodzexbaBtn">200dp</dimen>
-    <dimen name="gamodzexbaBtnHeight">50dp</dimen>
+    <dimen name="gamodzexbaBtnHeight">60dp</dimen>
+    <dimen name="logomargin">13dp</dimen>
+    <dimen name="hamburgerbuttonsize">30dp</dimen>
+    <dimen name="heigofham">3dp</dimen>
+    <dimen name="hamburgermargin">5dp</dimen>
+    <dimen name="menuwidth">250dp</dimen>
+    <dimen name="sliderheight">60dp</dimen>
+    <dimen name="slidertext">9sp</dimen>
+    <dimen name="menutextsize">13sp</dimen>
+    <dimen name="maintextsize">12dp</dimen>
+    <dimen name="paddingedittext">16dp</dimen>
+    <dimen name="slidericonsize">23dp</dimen>
+    <dimen name="gamodzexebabuttontext">13dp</dimen>
 </resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logomargin">11dp</dimen>
+    <dimen name="hamburgerbuttonsize">25dp</dimen>
+    <dimen name="heigofham">3dp</dimen>
+    <dimen name="hamburgermargin">5dp</dimen>
+    <dimen name="menuwidth">120dp</dimen>
+    <dimen name="sliderheight">40dp</dimen>
+    <dimen name="slidertext">7sp</dimen>
+    <dimen name="menutextsize">8sp</dimen>
+    <dimen name="maintextsize">10dp</dimen>
+    <dimen name="paddingedittext">16dp</dimen>
+    <dimen name="slidericonsize">20dp</dimen>
+    <dimen name="gamodzexebabuttontext">10dp</dimen>
+</resources>

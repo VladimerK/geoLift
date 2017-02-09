@@ -2,32 +2,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/DrawerLayout1"
     android:layout_width="match_parent"
-    android:background="#3e4250"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#3e4250">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <android.support.percent.PercentRelativeLayout
+            android:id="@+id/bgView1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#3e4250"
             android:gravity="right"
-            android:id="@+id/bgView1"
-            android:visibility="gone"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
 
 
             <LinearLayout
                 android:id="@+id/crash_conta_safety"
-                app:layout_heightPercent="10%"
-                android:layout_width="250dp"
-                android:layout_marginTop="50dp"
+                android:layout_width="@dimen/menuwidth"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
                 android:orientation="horizontal"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp">
+                app:layout_heightPercent="10%">
 
 
                 <ImageView
@@ -37,81 +38,119 @@
                     android:src="@drawable/crashcaicon" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:gravity="left"
                     android:layout_marginLeft="5dp"
+                    android:gravity="left"
+                    android:id="@+id/menucrush4"
                     android:text="ავარიული გამოძახება"
                     android:textColor="@android:color/white"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/maintextsize" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/lurjixazi1_crash"
+                        android:layout_width="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="#0693c2"
+                        android:visibility="gone" />
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/about_us_safety"
-                android:layout_width="250dp"
+                android:layout_width="@dimen/menuwidth"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/crash_conta_safety"
                 android:orientation="horizontal"
-                app:layout_heightPercent="10%"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp">
+                app:layout_heightPercent="10%">
 
                 <ImageView
                     android:layout_width="30dp"
-                    android:layout_gravity="center_vertical"
                     android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
                     android:src="@drawable/aboutus" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:gravity="left"
-                    android:text="ჩვენს შესახებ"
                     android:layout_marginLeft="5dp"
+                    android:gravity="left"
+                    android:id="@+id/menuabout4"
+                    android:text="ჩვენს შესახებ"
                     android:textColor="@android:color/white"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/maintextsize" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/lurjixazi1_about"
+                        android:layout_width="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="#0693c2"
+                        android:visibility="gone" />
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/lift_savefty_safety"
-                android:layout_width="250dp"
-                app:layout_heightPercent="10%"
-                android:background="#82000000"
+                android:layout_width="@dimen/menuwidth"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/about_us_safety"
+                android:background="#82000000"
                 android:orientation="horizontal"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp">
+                app:layout_heightPercent="10%">
 
 
                 <ImageView
                     android:layout_width="30dp"
-                    android:layout_gravity="center_vertical"
                     android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
                     android:src="@drawable/savefty" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:gravity="left"
-                    android:text="ლიფტის უსაფრთხოება"
                     android:layout_marginLeft="5dp"
+                    android:gravity="left"
+                    android:id="@+id/menusave4"
+                    android:text="ლიფტის უსაფრთხოება"
                     android:textColor="@android:color/white"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/maintextsize" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:layout_width="6dp"
+                        android:id="@+id/save_blue"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="#0693c2" />
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/how_pay_safety"
-                app:layout_heightPercent="10%"
-                android:layout_width="250dp"
+                android:layout_width="@dimen/menuwidth"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lift_savefty_safety"
                 android:orientation="horizontal"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp">
+                app:layout_heightPercent="10%">
 
 
                 <ImageView
@@ -121,42 +160,70 @@
                     android:src="@drawable/howtopay" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:gravity="left"
                     android:layout_marginLeft="5dp"
+                    android:gravity="left"
+                    android:id="@+id/menupay4"
                     android:text="როგორ გადავიხადო"
                     android:textColor="@android:color/white"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/maintextsize" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/lurjixazi1_pay"
+                        android:layout_width="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="#0693c2"
+                        android:visibility="gone" />
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/partners_safety"
-                android:layout_width="250dp"
-                app:layout_heightPercent="10%"
+                android:layout_width="@dimen/menuwidth"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/how_pay_safety"
                 android:orientation="horizontal"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp">
+                app:layout_heightPercent="10%">
 
 
                 <ImageView
                     android:layout_width="30dp"
-                    android:layout_gravity="center_vertical"
                     android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
                     android:src="@drawable/partners" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:gravity="left"
-                    android:text="ჩვენს შესახებ"
                     android:layout_marginLeft="5dp"
+                    android:gravity="left"
+                    android:id="@+id/menupartner4"
+                    android:text="პარტნიორები"
                     android:textColor="@android:color/white"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/maintextsize" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/lurjixazi1_partners"
+                        android:layout_width="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="#0693c2"
+                        android:visibility="gone" />
+                </RelativeLayout>
             </LinearLayout>
 
 
@@ -169,17 +236,20 @@
             android:background="#172027"
             android:orientation="horizontal"
             android:visibility="visible">
+
             <ImageView
+                android:id="@+id/logoimage"
                 android:layout_width="@dimen/logoSize"
                 android:layout_height="@dimen/logoSizeH"
-                android:src="@drawable/logocopy"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="25dp"
-                android:id="@+id/logoimage"
-                android:layout_marginLeft="20dp"/>
+                android:src="@drawable/logocopy" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/logoimage">
+
                 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:tools="http://schemas.android.com/tools"
                     android:id="@+id/activity_test_fab"
@@ -189,19 +259,168 @@
                     tools:context="ge.idevelopers.Lifti.app.Main2Activity">
 
 
-
                     <ScrollView
-                        android:background="@color/colorPrimary"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                        <ImageView
-                            android:scaleType="fitXY"
-                            android:adjustViewBounds="true"
-                            android:scrollbars="vertical"
-                            android:src="@drawable/rules"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="600dp" />
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/erti" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/ertierti" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/meores_pirveli" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/meores_meore" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/oris_pirveli" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/oris_meore" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/oris_mesame" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/samis_pirveli" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/samis_meore" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/otxis_pirveli" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/otxis_meore" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/otxis_mesame" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/xutis_pirveli" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/xutis_meore" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/xutis_mesame" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/eqvsis_pirveli" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:adjustViewBounds="true"
+                                android:padding="20dp"
+                                android:scaleType="fitXY"
+                                android:scrollbars="vertical"
+                                android:src="@drawable/eqvsis_meore" />
+                        </LinearLayout>
                     </ScrollView>
                 </LinearLayout>
             </LinearLayout>
@@ -210,45 +429,45 @@
                 android:id="@+id/humburger_main1"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="20dp"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:layout_alignParentRight="true">
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/humburger_31"
-                    android:layout_width="30dp"
-                    android:layout_height="5dp"
+                    android:layout_width="@dimen/hamburgerbuttonsize"
+                    android:layout_height="@dimen/heigofham"
                     android:background="#ffff"
                     android:orientation="horizontal" />
 
 
                 <LinearLayout
                     android:id="@+id/humburger_11"
-                    android:layout_width="30dp"
-                    android:layout_height="5dp"
+                    android:layout_width="@dimen/hamburgerbuttonsize"
+                    android:layout_height="@dimen/heigofham"
                     android:layout_below="@+id/humburger_31"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/hamburgermargin"
                     android:background="#ffff"
                     android:orientation="horizontal" />
 
                 <LinearLayout
                     android:id="@+id/humburger_21"
-                    android:layout_width="30dp"
-                    android:layout_height="5dp"
+                    android:layout_width="@dimen/hamburgerbuttonsize"
+                    android:layout_height="@dimen/heigofham"
                     android:layout_below="@+id/humburger_31"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/hamburgermargin"
                     android:background="#ffff"
                     android:orientation="horizontal" />
 
                 <LinearLayout
                     android:id="@+id/humburger_41"
-                    android:layout_width="30dp"
-                    android:layout_height="5dp"
+                    android:layout_width="@dimen/hamburgerbuttonsize"
+                    android:layout_height="@dimen/heigofham"
                     android:layout_below="@+id/humburger_21"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/hamburgermargin"
                     android:background="#ffff"
                     android:orientation="horizontal" />
 
@@ -256,6 +475,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </RelativeLayout>
+
             <LinearLayout
                 android:id="@+id/RecyclerView1"
                 android:layout_width="20dp"

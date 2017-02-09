@@ -22,12 +22,10 @@
             <LinearLayout
                 android:id="@+id/crash_conta_about"
                 app:layout_heightPercent="10%"
-                android:layout_width="250dp"
+                android:layout_width="@dimen/menuwidth"
                 android:layout_marginTop="50dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp">
+                android:orientation="horizontal">
 
 
                 <ImageView
@@ -37,26 +35,38 @@
                     android:src="@drawable/crashcaicon" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:gravity="left"
+                    android:id="@+id/menucrush1"
                     android:layout_marginLeft="5dp"
                     android:text="ავარიული გამოძახება"
                     android:textColor="@android:color/white"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/maintextsize" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/lurjixazi3_crush"
+                        android:layout_width="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="#0693c2"
+                        android:visibility="gone" />
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/about_us_about"
-                android:layout_width="250dp"
+                android:layout_width="@dimen/menuwidth"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/crash_conta_about"
                 android:orientation="horizontal"
                 android:background="#82000000"
-                app:layout_heightPercent="10%"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp">
+                app:layout_heightPercent="10%">
 
                 <ImageView
                     android:layout_width="30dp"
@@ -65,25 +75,37 @@
                     android:src="@drawable/aboutus" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:gravity="left"
+                    android:id="@+id/menuabout1"
                     android:text="ჩვენს შესახებ"
                     android:layout_marginLeft="5dp"
                     android:textColor="@android:color/white"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/maintextsize" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/about_blue"
+                        android:layout_width="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="#0693c2"
+                        android:visibility="visible" />
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/lift_savefty_about"
-                android:layout_width="250dp"
+                android:layout_width="@dimen/menuwidth"
                 app:layout_heightPercent="10%"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/about_us_about"
-                android:orientation="horizontal"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp">
+                android:orientation="horizontal">
 
 
                 <ImageView
@@ -93,25 +115,37 @@
                     android:src="@drawable/savefty" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:gravity="left"
+                    android:id="@+id/menusave1"
                     android:text="ლიფტის უსაფრთხოება"
                     android:layout_marginLeft="5dp"
                     android:textColor="@android:color/white"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/maintextsize" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/lurjixazi3_savefty"
+                        android:layout_width="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="#0693c2"
+                        android:visibility="gone" />
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/how_pay_about"
                 app:layout_heightPercent="10%"
-                android:layout_width="250dp"
+                android:layout_width="@dimen/menuwidth"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lift_savefty_about"
-                android:orientation="horizontal"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp">
+                android:orientation="horizontal">
 
 
                 <ImageView
@@ -121,25 +155,37 @@
                     android:src="@drawable/howtopay" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:gravity="left"
+                    android:id="@+id/menupay1"
                     android:layout_marginLeft="5dp"
                     android:text="როგორ გადავიხადო"
                     android:textColor="@android:color/white"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/maintextsize" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/lurjixazi3_pay"
+                        android:layout_width="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="#0693c2"
+                        android:visibility="gone" />
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/partners_about"
-                android:layout_width="250dp"
+                android:layout_width="@dimen/menuwidth"
                 app:layout_heightPercent="10%"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/how_pay_about"
-                android:orientation="horizontal"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp">
+                android:orientation="horizontal">
 
 
                 <ImageView
@@ -149,14 +195,28 @@
                     android:src="@drawable/partners" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:gravity="left"
+                    android:id="@+id/menupartner1"
                     android:text="პარტნიორები"
                     android:layout_marginLeft="5dp"
                     android:textColor="@android:color/white"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/maintextsize" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/lurjixazi3_partners"
+                        android:layout_width="6dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="#0693c2"
+                        android:visibility="gone" />
+                </RelativeLayout>
             </LinearLayout>
 
 
@@ -169,6 +229,7 @@
             android:background="#172027"
             android:orientation="horizontal"
             android:visibility="visible">
+
             <ImageView
                 android:layout_width="@dimen/logoSize"
                 android:layout_height="@dimen/logoSizeH"
@@ -186,22 +247,53 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                tools:context="ge.idevelopers.Lifti.app.Main2Activity">
+                tools:context="ge.idevelopers.Lifti.app.AboutUs">
 
 
 
                 <ScrollView
-                    android:background="@color/colorPrimary"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
                     <ImageView
                         android:scaleType="fitXY"
                         android:adjustViewBounds="true"
                         android:scrollbars="vertical"
-                        android:src="@drawable/about"
+                        android:src="@drawable/about_pirveli"
                         android:layout_width="match_parent"
-                        android:layout_height="600dp" />
+                        android:layout_height="200dp" />
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:scrollbars="vertical"
+                        android:src="@drawable/about_meore"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:scrollbars="vertical"
+                        android:src="@drawable/about_mesame"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp" />
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:scrollbars="vertical"
+                        android:src="@drawable/about_meotxe"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp" />
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:scrollbars="vertical"
+                        android:src="@drawable/about_mexute"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp" />
+</LinearLayout>
                 </ScrollView>
             </LinearLayout>
             </LinearLayout>
@@ -220,7 +312,7 @@
                 <LinearLayout
                     android:id="@+id/humburger_32"
                     android:layout_width="30dp"
-                    android:layout_height="5dp"
+                    android:layout_height="3dp"
                     android:background="#ffff"
                     android:orientation="horizontal" />
 
@@ -228,27 +320,27 @@
                 <LinearLayout
                     android:id="@+id/humburger_12"
                     android:layout_width="30dp"
-                    android:layout_height="5dp"
+                    android:layout_height="3dp"
                     android:layout_below="@+id/humburger_32"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:background="#ffff"
                     android:orientation="horizontal" />
 
                 <LinearLayout
                     android:id="@+id/humburger_22"
                     android:layout_width="30dp"
-                    android:layout_height="5dp"
+                    android:layout_height="3dp"
                     android:layout_below="@+id/humburger_32"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:background="#ffff"
                     android:orientation="horizontal" />
 
                 <LinearLayout
                     android:id="@+id/humburger_42"
                     android:layout_width="30dp"
-                    android:layout_height="5dp"
+                    android:layout_height="3dp"
                     android:layout_below="@+id/humburger_22"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:background="#ffff"
                     android:orientation="horizontal" />
 

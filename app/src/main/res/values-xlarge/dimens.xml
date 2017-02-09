@@ -6,4 +6,16 @@
     <dimen name="logoSizeH">80dp</dimen>
     <dimen name="gamodzexbaBtn">300dp</dimen>
     <dimen name="gamodzexbaBtnHeight">100dp</dimen>
+    <dimen name="logomargin">20dp</dimen>
+    <dimen name="hamburgerbuttonsize">45dp</dimen>
+    <dimen name="heigofham">6dp</dimen>
+    <dimen name="hamburgermargin">10dp</dimen>
+    <dimen name="menuwidth">300dp</dimen>
+    <dimen name="sliderheight">70dp</dimen>
+    <dimen name="slidertext">9sp</dimen>
+    <dimen name="menutextsize">15sp</dimen>
+    <dimen name="maintextsize">15dp</dimen>
+    <dimen name="paddingedittext">16dp</dimen>
+    <dimen name="slidericonsize">30dp</dimen>
+    <dimen name="gamodzexebabuttontext">15dp</dimen>
 </resources>

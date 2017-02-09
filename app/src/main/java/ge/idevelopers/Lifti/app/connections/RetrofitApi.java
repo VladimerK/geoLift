@@ -7,7 +7,7 @@ import retrofit2.http.POST;
 
 public interface RetrofitApi {
 
-    @POST("http://lift.com.ge/home/now")
+    @POST("http://lift.com.ge/home/android")
     Call<SendClas> send(@Body SendClas goObject);
 
 
