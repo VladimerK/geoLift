@@ -10,6 +10,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.location.Location;
@@ -27,6 +28,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -90,9 +92,9 @@ public class MainActivity extends AppCompatActivity {
     LocationManager locationManager;
     LocationListener locationListener;
     String provider;
-    public static final String INPUTNUMBERLIFT = "ნომერი უნდა შედგებოდეს 9 ციფრისგან !";
+    public static final String INPUTNUMBERLIFT = "მობილურის ნომერი უნდა შედგებოდეს 9 ციფრისგან !";
     public static final String INPUTNUMBER = "ლიფტის ნომერი უნდა შედგებოდეს 3 ციფრისგან !";
-    public static final String NO_NUMBER = "შეიყვანეთ ნომერი !";
+    public static final String NO_NUMBER = "შეიყვანეთ მობილურის ნომერი !";
     public static final String NOINTERNET = "ჩართეთ ინტერნეტი";
     public static final String NOINTERNET_POSSITIVE = "თავიდან სცადე";
     public static final String DIAX = "დიახ";
@@ -114,7 +116,10 @@ public class MainActivity extends AppCompatActivity {
     Animation act;
     Animation act2;
 
-
+    public int dpToPx(int dp) {
+        DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
+        return Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -127,13 +132,28 @@ public class MainActivity extends AppCompatActivity {
                 1);}
         initLocationManager();
         crash_conta.setBackgroundColor(Color.argb(130, 0, 0, 0));
-        String evalue;
         if (etInput.length() == 3) {
             getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
             etInput.setCursorVisible(false);
         }
+        else if(etInput.getText().toString().equals("")){
+            etInput.requestFocus();
+            /*InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(editText, InputMethodManager.SHOW_IMPLICIT);*/
+            etInput.setCursorVisible(true);
+            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
+        }
         if (etInputNumber.length() == 9) {
             etInputNumber.setCursorVisible(false);
+        }
+        else if(etInputNumber.getText().toString().equals("")){
+            etInputNumber.requestFocus();
+            /*InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(editText, InputMethodManager.SHOW_IMPLICIT);*/
+            etInput.setCursorVisible(true);
+            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
         }
         etInput.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -151,18 +171,22 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
         etInput.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+                if(etInput.getText().toString().isEmpty()){
+                    getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+                    etInput.setCursorVisible(true);
+                }
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if ((start + count) == 3) {
-                    saveStepPref("liftNum", etInput.getText().toString());
                     etInputNumber.requestFocus();
                 }
+                saveStepPref("liftNum", etInput.getText().toString());
             }
 
             @Override
@@ -183,9 +207,9 @@ public class MainActivity extends AppCompatActivity {
                     InputMethodManager inputMethodManager = (InputMethodManager)
                             getSystemService(Activity.INPUT_METHOD_SERVICE);
                     inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-                    saveStepPref("editStepLength", etInputNumber.getText().toString());
                     etInputNumber.setCursorVisible(false);
                 }
+                saveStepPref("editStepLength", etInputNumber.getText().toString());
             }
 
             @Override
@@ -195,9 +219,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
         //MENU
         final LinearLayout linearLayout = (LinearLayout) findViewById(R.id.RecyclerView);
-        RelativeLayout humburger = (RelativeLayout) findViewById(R.id.humburger_main);
+        final RelativeLayout humburger = (RelativeLayout) findViewById(R.id.humburger_main);
         final RelativeLayout linearLayout2 = (RelativeLayout) findViewById(R.id.linear);
         final RelativeLayout mainLayout = (RelativeLayout) findViewById(R.id.DrawerLayout);
         humburger_1 = findViewById(R.id.humburger_1);
@@ -220,6 +245,41 @@ public class MainActivity extends AppCompatActivity {
         rotatetwoback = AnimationUtils.loadAnimation(this, R.anim.rotatetwoback);
         act = AnimationUtils.loadAnimation(this, R.anim.activityrorate);
         act2 = AnimationUtils.loadAnimation(this, R.anim.actvityrotateback);
+        RelativeLayout mizezi = (RelativeLayout) findViewById(R.id.mizezi);
+        if ((getResources().getConfiguration().screenLayout &
+                Configuration.SCREENLAYOUT_SIZE_MASK) ==
+                Configuration.SCREENLAYOUT_SIZE_XLARGE) {
+            LinearLayout.LayoutParams p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0);
+            p.weight = 0.72f;
+            p.setMargins(26,26,26,26);
+            llInput.setLayoutParams(p);
+            llInput.setBackgroundResource(R.drawable.textbackgroun);
+            llInputNumber.setLayoutParams(p);
+            llInputNumber.setBackgroundResource(R.drawable.textbackgroun);
+
+        }
+        ImageView image1 = (ImageView) findViewById(R.id.image_1);
+        ImageView mainlogo = (ImageView) findViewById(R.id.mainlogo);
+        ImageView image2 = (ImageView) findViewById(R.id.image_2);
+        TextView text1 = (TextView) findViewById(R.id.text_1);
+        TextView text2 = (TextView) findViewById(R.id.text_2);
+        RelativeLayout logorel = (RelativeLayout) findViewById(R.id.logorel);
+         float den = getResources().getDisplayMetrics().density;
+      if(den < 1.63f){
+          LinearLayout.LayoutParams r = new LinearLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,0);
+          r.weight = 1.243f;
+          r.setMargins(dpToPx(16),0,dpToPx(16),0);
+          mizezi.setLayoutParams(r);
+          text1.setTextSize(8);
+          text2.setTextSize(8);
+          image2.setPadding(dpToPx(10),0,0,0);
+          mainlogo.setVisibility(View.GONE);
+          logorel.setVisibility(View.VISIBLE);
+          btn.setWidth(115);
+          btn.setHeight(40);
+          btn.setTextSize(13f);
+      }
+
         linearLayout2.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -535,27 +595,48 @@ public class MainActivity extends AppCompatActivity {
         } else if (etInputNumber.getText().length() != 9) {
             makeDialog(INPUTNUMBERLIFT, DIAX);
         } else {
-            SendClas goObject = new SendClas(latitude, longtitude, etInput.getText().toString(), etInputNumber.getText().toString(), st_bk);
-            Log.i("l", goObject.toString());
-            //=========================================================================
-            RetrofitApi api = RetrofitSingleTone.getInstance().getRetrofitApi();
-            final Call<SendClas> send = api.send(goObject);
-            send.enqueue(new Callback<SendClas>() {
+            AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+            dialog.setMessage("ნამდვილად გსურთ ოპერატორი ამ ნომერზე " + etInputNumber.getText().toString() + " დაგიკავშირდეთ ?");
+            dialog.setPositiveButton("კი", new DialogInterface.OnClickListener() {
                 @Override
-                public void onResponse(Call<SendClas> call, Response<SendClas> response) {
-                }
+                public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+                    SendClas goObject = new SendClas(latitude, longtitude, etInput.getText().toString(), etInputNumber.getText().toString(), st_bk);
+                    Log.i("l", goObject.toString());
+                    //=========================================================================
+                    RetrofitApi api = RetrofitSingleTone.getInstance().getRetrofitApi();
+                    final Call<SendClas> send = api.send(goObject);
+                    send.enqueue(new Callback<SendClas>() {
+                        @Override
+                        public void onResponse(Call<SendClas> call, Response<SendClas> response) {
+                        }
 
-                @Override
-                public void onFailure(Call<SendClas> call, Throwable t) {
-                    SentDialog("მოთხოვნა გაიგზვანა", DIAX);
+                        @Override
+                        public void onFailure(Call<SendClas> call, Throwable t) {
+                            SentDialog("მოთხოვნა გაიგზვანა", DIAX);
+                        }
+                    });
                 }
             });
+            dialog.setNegativeButton("არა", new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+
+                }
+            });
+            AlertDialog alert = dialog.create();
+
+            alert.show();
+            Button pbutton = alert.getButton(DialogInterface.BUTTON_POSITIVE);
+            pbutton.setTextColor(Color.parseColor("#007AFF"));
+            Button nbutton = alert.getButton(DialogInterface.BUTTON_NEGATIVE);
+            nbutton.setTextColor(Color.parseColor("#007AFF"));
             //=========================================================================
         }
     }
 
     public void callOperator() {
-        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "557002838"));
+        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "0322195979"));
         startActivity(intent);
         if (ActivityCompat.checkSelfPermission(MainActivity.this,
                 Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
@@ -797,7 +878,7 @@ public class MainActivity extends AppCompatActivity {
         }
         //makeUseOfNewLocation(locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER));
 
-        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+     //   locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
     }
 
     private void loadStepPref() {
@@ -813,9 +894,18 @@ public class MainActivity extends AppCompatActivity {
     private void saveStepPref(String key, String value) {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor edit = sp.edit();
-        edit.putString(key, value);
-        edit.apply();
-        edit.commit();
+
+
+        if (key.equals("")){
+            edit.clear();
+            edit.apply();
+            edit.commit();
+        }
+        else {
+            edit.putString(key, value);
+            edit.apply();
+            edit.commit();
+        }
     }
 
     public void gamodzaxeba(View v) {
@@ -830,16 +920,21 @@ public class MainActivity extends AppCompatActivity {
                 if (time >= 10 && time < 19) {
                     if (checkInternetConnection()) {
 
-                        if (etInput.getText().toString().equals("")) {
-                            sendSos();
-                        } else if (etInput.getText().toString().length() != 3) {
+                        if(etInput.getText().toString().equals("") && etInputNumber.getText().toString().equals("")){
+                            makeDialog("ლიფტის ნომერი უნდა შედგებეოდეს 3 ციფრისგან, მობილურის ნომერი უნდა სედგებოდეს 9 ციფრისგან", DIAX);
+                        }
+                        else if (etInput.getText().toString().equals("")) {
+                                    sendSos();
+
+                        }
+                        else if (etInput.getText().toString().length() != 3) {
                             if (etInputNumber.getText().toString().length() != 9) {
                                 makeDialog("ლიფტის ნომერი უნდა შედგებეოდეს 3 ციფრისგან, მობილურის ნომერი უნდა სედგებოდეს 9 ციფრისგან", DIAX);
                             } else {
                                 makeDialog(INPUTNUMBER, DIAX);
                             }
                         } else {
-                            sendSos();
+                          sendSos();
                         }
                     } else {
                         checkCall();
@@ -863,8 +958,10 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 if (time >= 10 && time < 19) {
                     if (checkInternetConnection()) {
-
-                        if (etInput.getText().toString().equals("")) {
+                        if(etInput.getText().toString().equals("") && etInputNumber.getText().toString().equals("")){
+                            makeDialog("ლიფტის ნომერი უნდა შედგებეოდეს 3 ციფრისგან, მობილურის ნომერი უნდა სედგებოდეს 9 ციფრისგან", DIAX);
+                        }
+                        else if (etInput.getText().toString().equals("")) {
                             sendSos();
                         } else if (etInput.getText().toString().length() != 3) {
                             if (etInputNumber.getText().toString().length() != 9) {
@@ -873,7 +970,7 @@ public class MainActivity extends AppCompatActivity {
                                 makeDialog(INPUTNUMBER, DIAX);
                             }
                         } else {
-                            sendSos();
+                           sendSos();
                         }
                     } else {
                         checkCall();
@@ -922,4 +1019,3 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 }
-

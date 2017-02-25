@@ -96,11 +96,19 @@ public class Slider extends LinearLayout {
 
         slideImage = new ImageView(context);
         slideImage.setImageResource(R.drawable.lift_broken);
+        float den = getResources().getDisplayMetrics().density;
 
         sliderTExt=new TextView(context);
-        sliderTExt.setTextSize(9);
+        sliderTExt.setTextSize(8);
         sliderTExt.setText("ლიფტი დაზიანებულია");
+        sliderTExt.setPadding(32,0,0,0);
         sliderTExt.setTextColor(Color.WHITE);
+        if(den < 1.63f){
+            sliderTExt.setTextSize(7);
+            sliderTExt.setPadding(0,0,0,0);
+            slideImage.setPadding(3,3,3,3);
+        }
+
         Typeface type = Typeface.createFromAsset(context.getAssets(),"bpgphonesans.ttf");
         sliderTExt.setTypeface(type);
 
@@ -108,6 +116,9 @@ public class Slider extends LinearLayout {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.RoundCornerProgress);
 
         radius = (int) typedArray.getDimension(R.styleable.RoundCornerProgress_Radius, DEFAULT_PROGRESS_RADIUS);
+        if(den < 1.53f){
+
+        }
         padding = (int) typedArray.getDimension(R.styleable.RoundCornerProgress_BackgroundPadding, dp2px(DEFAULT_BACKGROUND_PADDING));
         isReverse = typedArray.getBoolean(R.styleable.RoundCornerProgress_rcReverse, false);
         max = typedArray.getFloat(R.styleable.RoundCornerProgress_rcMax, DEFAULT_MAX_PROGRESS);
@@ -138,6 +149,7 @@ public class Slider extends LinearLayout {
         int k=(imageView1.getLayoutParams().height);
 
         slideImage.setLayoutParams(new ViewGroup.LayoutParams(k,k));
+
 
         backgroundDrawable = createGradientDrawable(colorBackground);
         progreeColor = createGradientDrawable(colorProgress);
@@ -214,6 +226,7 @@ public class Slider extends LinearLayout {
                 imageView2.setVisibility(INVISIBLE);
                 slideImage.setImageResource(R.drawable.sos_white);
                 sliderTExt.setText("ადამიანია გაჭედილი");
+
             }
 
             public void onSwipeLeft() {

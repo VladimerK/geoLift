@@ -34,7 +34,7 @@
                     android:id="@+id/crash_conta"
                     android:layout_width="@dimen/menuwidth"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="@dimen/menumargintop"
                     android:background="#82000000"
                     android:orientation="horizontal"
                     app:layout_heightPercent="10%">
@@ -43,6 +43,7 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_gravity="center_vertical"
                         android:paddingBottom="5dp"
                         android:paddingTop="5dp"
@@ -52,7 +53,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="10dp"
                         android:gravity="left"
                         android:paddingBottom="5dp"
                         android:paddingTop="5dp"
@@ -88,6 +89,7 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_gravity="center_vertical"
                         android:src="@drawable/aboutus" />
 
@@ -95,7 +97,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="10dp"
                         android:gravity="left"
                         android:id="@+id/menuabout"
                         android:text="ჩვენს შესახებ"
@@ -128,6 +130,7 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_gravity="center_vertical"
                         android:src="@drawable/savefty" />
 
@@ -135,7 +138,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="10dp"
                         android:gravity="left"
                         android:id="@+id/menusave"
                         android:text="ლიფტის უსაფრთხოება"
@@ -168,6 +171,7 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_gravity="center_vertical"
                         android:src="@drawable/howtopay" />
 
@@ -175,7 +179,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="10dp"
                         android:gravity="left"
                         android:text="როგორ გადავიხადო"
                         android:id="@+id/menupay"
@@ -198,7 +202,7 @@
 
                 <LinearLayout
                     android:id="@+id/partners"
-                    android:layout_width="250dp"
+                    android:layout_width="@dimen/menuwidth"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/how_pay"
                     android:orientation="horizontal"
@@ -208,6 +212,7 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
                         android:layout_gravity="center_vertical"
                         android:src="@drawable/partners" />
 
@@ -215,7 +220,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="10dp"
                         android:id="@+id/menupartner"
                         android:gravity="left"
                         android:text="პარტნიორები"
@@ -237,6 +242,7 @@
                 </LinearLayout>
 
 
+
             </android.support.percent.PercentRelativeLayout>
 
             <RelativeLayout
@@ -246,6 +252,7 @@
                 android:orientation="horizontal"
                 android:background="@drawable/liftback"
                 android:visibility="visible">
+
                 <com.makeramen.roundedimageview.RoundedImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/imageView1"
@@ -260,17 +267,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
+                <LinearLayout
+                    android:id="@+id/RecyclerView"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="#00ff0000"
+                    android:orientation="horizontal"
+                    android:scrollbars="vertical">
+
+                </LinearLayout>
 
                 <RelativeLayout
+                    android:layout_alignParentEnd="true"
                     android:id="@+id/humburger_main"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="30dp"
+                    android:paddingRight="@dimen/humburgerpad"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="@dimen/logomargintop"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_alignParentRight="true">
 
                     <View
                         android:id="@+id/humburger_3"
@@ -306,23 +324,7 @@
                         android:layout_marginTop="@dimen/hamburgermargin"
                         android:background="#ffff"
                         android:orientation="horizontal" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
                 </RelativeLayout>
-
-                <LinearLayout
-                    android:id="@+id/RecyclerView"
-                    android:layout_width="20dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentRight="true"
-                    android:background="#00ff0000"
-                    android:orientation="horizontal"
-                    android:scrollbars="vertical">
-
-                </LinearLayout>
-
                 <LinearLayout
                     android:id="@+id/activity_main"
                     android:layout_width="match_parent"
@@ -333,21 +335,31 @@
                     android:layout_toRightOf="@+id/imageView1"
                     android:layout_toEndOf="@+id/imageView1">
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="6dp"
-                        android:layout_marginTop="@dimen/logomargin"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
+                        android:layout_height="100dp">
                         <ImageView
                             android:layout_width="@dimen/logoSize"
                             android:layout_height="@dimen/logoSizeH"
                             android:background="@drawable/logocopy"
-                            android:padding="2dp" />
-
-                    </LinearLayout>
+                            android:layout_marginTop="@dimen/logomargintop"
+                            android:id="@+id/mainlogo"
+                            android:padding="2dp"
+                            android:layout_marginLeft="10dp"/>
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:id="@+id/logorel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="@dimen/logoSize"
+                            android:layout_height="@dimen/logoSizeH"
+                            android:background="@drawable/logocopy"
+                            android:layout_marginTop="10dp"
+                            android:padding="2dp"
+                            android:layout_marginLeft="10dp"/>
+                        </RelativeLayout>
+                    </RelativeLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -359,7 +371,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
-                            android:text="შეიყვანეთ ლიფტის ნომერი"
+                            android:text="ლიფტის ნომერი"
                             android:textColor="#FFF"
                             android:textSize="@dimen/maintextsize" />
 
@@ -411,7 +423,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
-                            android:text="შეიყვანეთ თქვენი ნომერი"
+                            android:text="მობილურის ნომერი"
                             android:textColor="#FFF"
                             android:textSize="@dimen/maintextsize" />
                     </LinearLayout>
@@ -425,7 +437,6 @@
                         android:layout_weight="0.9"
                         android:background="@drawable/textbackgroun"
                         android:gravity="center"
-                        android:layoutMode="opticalBounds"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -445,7 +456,7 @@
                             android:maxLength="9"
                             android:textColorHint="#c8c7bebe"
                             android:paddingLeft="2dp"
-                            android:hint="Your Number"
+                            android:hint="Phone Number"
                             android:layout_marginLeft="5dp"
                             android:paddingRight="35dp"
                             android:textColor="#000"
@@ -485,12 +496,12 @@
                         <ge.idevelopers.Lifti.app.slider.Slider
                             android:id="@+id/asd"
                             android:layout_width="match_parent"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="10dp"
                             android:layout_height="wrap_content"
                             app:BackgroundColor="#ffffff"
                             app:BackgroundPadding="1dp"
                             app:ProgressColor="#0893c2"
-                            app:Radius="25dp" />
+                            app:Radius="@dimen/sliderimageadf" />
                     </RelativeLayout>
 
                     <RelativeLayout

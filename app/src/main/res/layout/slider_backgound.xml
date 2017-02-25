@@ -6,12 +6,15 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/sliderheight">
+        android:layout_height="@dimen/sliderheight"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:id="@+id/linear"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/sliderheight"
+            android:layout_height="@dimen/sliderheightdev"
             android:padding="2dp"
             android:orientation="horizontal">
 
@@ -22,7 +25,7 @@
             android:layout_width="@dimen/slidericonsize"
             android:layout_height="@dimen/slidericonsize"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="5dp"
+            android:paddingLeft="10dp"
             android:src="@drawable/lift_boken_blu"
             android:visibility="invisible" />
 
@@ -33,13 +36,13 @@
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/image_1"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="6dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
             android:layout_toEndOf="@+id/image_1"
             android:layout_toRightOf="@+id/image_1"
             android:text="ლიფტი დაზიანებულია"
-            android:textColor="#001997"
+            android:textColor="#0693c2"
             android:textSize="@dimen/slidertext"
             android:visibility="invisible" />
 
@@ -48,7 +51,7 @@
             android:layout_width="@dimen/slidericonsize"
             android:layout_height="@dimen/slidericonsize"
             android:layout_centerVertical="true"
-            android:layout_marginRight="5dp"
+            android:layout_marginRight="8dp"
             android:layout_toLeftOf="@+id/text_2"
             android:src="@drawable/sos"
             android:visibility="visible" />
@@ -60,10 +63,10 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="5dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="12dp"
-            android:text="ადამიანი გაჭედილია"
-            android:textColor="#001997"
+            android:text="ადამიანია გაჭედილია"
+            android:textColor="#0693c2"
             android:textSize="@dimen/slidertext"
             android:visibility="visible" />
     </RelativeLayout>

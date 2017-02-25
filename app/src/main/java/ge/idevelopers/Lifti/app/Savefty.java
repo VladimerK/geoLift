@@ -75,6 +75,7 @@ public class Savefty extends AppCompatActivity {
         final View lurjixazi_partners = findViewById(R.id.lurjixazi1_partners);
         final View lurjixazi_crush = findViewById(R.id.lurjixazi1_crash);
         final View save_blue = findViewById(R.id.save_blue);
+        LinearLayout scrollView =(LinearLayout) findViewById(R.id.scrollsave);
         TextView menu_crush = (TextView) findViewById(R.id.menucrush4);
         TextView menu_about = (TextView) findViewById(R.id.menuabout4);
         TextView menu_save = (TextView) findViewById(R.id.menusave4);
@@ -86,17 +87,15 @@ public class Savefty extends AppCompatActivity {
         menu_save.setTypeface(type);
         menu_pay.setTypeface(type);
         menu_part.setTypeface(type);
-
-        safeLayout2.setOnTouchListener(new View.OnTouchListener() {
+        scrollView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-
-                final ObjectAnimator oa_y = ObjectAnimator.ofFloat(safeLayout2, "y", 0);
-                final ObjectAnimator oa = ObjectAnimator.ofFloat(safeLayout2, "x", 0);
-                AnimatorSet animatorSet = new AnimatorSet();
-                animatorSet.playTogether(oa, oa_y);
-
                 if (isShow) {
+                    final ObjectAnimator oa_y = ObjectAnimator.ofFloat(safeLayout2, "y", 0);
+                    final ObjectAnimator oa = ObjectAnimator.ofFloat(safeLayout2, "x", 0);
+                    AnimatorSet animatorSet = new AnimatorSet();
+                    animatorSet.playTogether(oa, oa_y);
+                    animatorSet.start();
                     humburger_41.startAnimation(fadein);
                     humburger_31.startAnimation(fadein);
                     humburger_11.startAnimation(rotateback);
@@ -108,6 +107,31 @@ public class Savefty extends AppCompatActivity {
                 return false;
             }
         });
+
+        safeLayout2.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+
+
+
+                if (isShow) {
+                    final ObjectAnimator oa_y = ObjectAnimator.ofFloat(safeLayout2, "y", 0);
+                    final ObjectAnimator oa = ObjectAnimator.ofFloat(safeLayout2, "x", 0);
+                    AnimatorSet animatorSet = new AnimatorSet();
+                    animatorSet.playTogether(oa, oa_y);
+                    animatorSet.start();
+                    humburger_41.startAnimation(fadein);
+                    humburger_31.startAnimation(fadein);
+                    humburger_11.startAnimation(rotateback);
+                    humburger_21.startAnimation(rotatetwoback);
+                    isShow = false;
+                    safeLayout2.setBackgroundColor(Color.argb(255,23,32,39));
+                    bgView.setVisibility(View.GONE);
+                }
+                return false;
+            }
+        });
+
 
         humburger.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,7 +150,6 @@ public class Savefty extends AppCompatActivity {
                     humburger_21.startAnimation(animation_two);
                     isShow = true;
                     safeLayout2.setBackgroundResource(R.drawable.rounded);
-
                 } else {
                     final ObjectAnimator oa_y = ObjectAnimator.ofFloat(safeLayout2, "y", 0);
                     final ObjectAnimator oa = ObjectAnimator.ofFloat(safeLayout2, "x", 0);

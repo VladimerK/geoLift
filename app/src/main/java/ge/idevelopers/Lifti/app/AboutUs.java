@@ -52,7 +52,7 @@ public class AboutUs extends AppCompatActivity {
         partners_safety= (LinearLayout) findViewById(R.id.partners_about);
 
         //MENU
-        final LinearLayout linearLayout = (LinearLayout) findViewById(R.id.RecyclerView2);
+       // final LinearLayout linearLayout = (LinearLayout) findViewById(R.id.RecyclerView2);
         RelativeLayout humburger = (RelativeLayout) findViewById(R.id.humburger_main2);
         final RelativeLayout linearAbout2 = (RelativeLayout) findViewById(R.id.linear2);
         final RelativeLayout mainAbout = (RelativeLayout) findViewById(R.id.DrawerLayout2);
@@ -83,23 +83,46 @@ public class AboutUs extends AppCompatActivity {
         menu_save.setTypeface(type);
         menu_pay.setTypeface(type);
         menu_part.setTypeface(type);
-        linearAbout2.setOnTouchListener(new View.OnTouchListener() {
+        LinearLayout scrollabout = (LinearLayout) findViewById(R.id.scrollabout);
+        scrollabout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", 0);
-                final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", 0);
-                AnimatorSet animatorSet = new AnimatorSet();
-                animatorSet.playTogether(oa, oa_y);
                 if (isShow){
+                    final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", 0);
+                    final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", 0);
+                    AnimatorSet animatorSet = new AnimatorSet();
+                    animatorSet.playTogether(oa, oa_y);
                     humburger_41.startAnimation(fadein);
                     humburger_31.startAnimation(fadein);
                     humburger_11.startAnimation(rotateback);
                     humburger_21.startAnimation(rotatetwoback);
+                    animatorSet.start();
                     isShow = false;
                     linearAbout2.setBackgroundColor(Color.argb(255,23,32,39));
                     bgView.setVisibility(View.GONE);
                 }
-                animatorSet.start();
+                return false;
+            }
+        });
+        linearAbout2.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+
+                if (isShow){
+                    final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", 0);
+                    final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", 0);
+                    AnimatorSet animatorSet = new AnimatorSet();
+                    animatorSet.playTogether(oa, oa_y);
+                    humburger_41.startAnimation(fadein);
+                    humburger_31.startAnimation(fadein);
+                    humburger_11.startAnimation(rotateback);
+                    humburger_21.startAnimation(rotatetwoback);
+                    animatorSet.start();
+                    isShow = false;
+                    linearAbout2.setBackgroundColor(Color.argb(255,23,32,39));
+                    bgView.setVisibility(View.GONE);
+                }
+
 
                 return false;
             }

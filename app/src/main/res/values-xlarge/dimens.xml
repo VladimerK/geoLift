@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="radioHeight">70dp</dimen>
-    <dimen name="images">70dp</dimen>
+    <dimen name="images">35dp</dimen>
     <dimen name="logoSize">75dp</dimen>
     <dimen name="logoSizeH">80dp</dimen>
     <dimen name="gamodzexbaBtn">300dp</dimen>
@@ -10,12 +10,28 @@
     <dimen name="hamburgerbuttonsize">45dp</dimen>
     <dimen name="heigofham">6dp</dimen>
     <dimen name="hamburgermargin">10dp</dimen>
-    <dimen name="menuwidth">300dp</dimen>
+    <dimen name="menuwidth">630dp</dimen>
     <dimen name="sliderheight">70dp</dimen>
     <dimen name="slidertext">9sp</dimen>
-    <dimen name="menutextsize">15sp</dimen>
+    <dimen name="menutextsize">20sp</dimen>
     <dimen name="maintextsize">15dp</dimen>
     <dimen name="paddingedittext">16dp</dimen>
     <dimen name="slidericonsize">30dp</dimen>
     <dimen name="gamodzexebabuttontext">15dp</dimen>
+    <dimen name="menuMargin">600dp</dimen>
+    <dimen name="abouttextsize">300dp</dimen>
+    <dimen name="aboutsizecheck">250dp</dimen>
+    <dimen name="aboutSizecheckedlast">170dp</dimen>
+    <dimen name="abouttextsizelast">180dp</dimen>
+    <dimen name="savefirst">285dp</dimen>
+    <dimen name="savesecond">120dp</dimen>
+    <dimen name="savethird">100dp</dimen>
+    <dimen name="savebolo">180dp</dimen>
+    <dimen name="save150">210dp</dimen>
+    <dimen name="humburgerpad">100dp</dimen>
+    <dimen name="menumargintop">70dp</dimen>
+    <dimen name="menuwidth1">552dp</dimen>
+    <dimen name="logomargintop">30dp</dimen>
+    <dimen name="sliderimageadf">25dp</dimen>
+    <dimen name="menumargintopa">50dp</dimen>
 </resources>

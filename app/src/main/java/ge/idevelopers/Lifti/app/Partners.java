@@ -98,12 +98,12 @@ public class Partners extends AppCompatActivity {
         linearAbout2.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-
-                final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", 0);
-                final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", 0);
-                AnimatorSet animatorSet = new AnimatorSet();
-                animatorSet.playTogether(oa, oa_y);
                 if (isShow) {
+                    final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", 0);
+                    final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", 0);
+                    AnimatorSet animatorSet = new AnimatorSet();
+                    animatorSet.playTogether(oa, oa_y);
+                    animatorSet.start();
                     humburger_41.startAnimation(fadein);
                     humburger_31.startAnimation(fadein);
                     humburger_11.startAnimation(rotateback);
@@ -327,6 +327,25 @@ public class Partners extends AppCompatActivity {
         //MENU
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (isShow) {
+                    final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", 0);
+                    final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", 0);
+                    AnimatorSet animatorSet = new AnimatorSet();
+                    animatorSet.playTogether(oa, oa_y);
+                    animatorSet.start();
+                    humburger_41.startAnimation(fadein);
+                    humburger_31.startAnimation(fadein);
+                    humburger_11.startAnimation(rotateback);
+                    humburger_21.startAnimation(rotatetwoback);
+                    isShow = false;
+                    linearAbout2.setBackgroundColor(Color.argb(255,23,32,39));
+                }
+                return false;
+            }
+        });
 
         mAdapter = new PartnerAdapter(partnerList);
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getApplicationContext(),2);

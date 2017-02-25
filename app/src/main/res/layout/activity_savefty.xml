@@ -24,9 +24,9 @@
 
             <LinearLayout
                 android:id="@+id/crash_conta_safety"
-                android:layout_width="@dimen/menuwidth"
+                android:layout_width="@dimen/menuwidth1"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="@dimen/menumargintop"
                 android:orientation="horizontal"
                 app:layout_heightPercent="10%">
 
@@ -34,6 +34,7 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/crashcaicon" />
 
@@ -41,12 +42,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="10dp"
                     android:gravity="left"
                     android:id="@+id/menucrush4"
                     android:text="ავარიული გამოძახება"
                     android:textColor="@android:color/white"
-                    android:textSize="@dimen/maintextsize" />
+                    android:textSize="@dimen/menutextsize" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -65,7 +66,7 @@
 
             <LinearLayout
                 android:id="@+id/about_us_safety"
-                android:layout_width="@dimen/menuwidth"
+                android:layout_width="@dimen/menuwidth1"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/crash_conta_safety"
                 android:orientation="horizontal"
@@ -74,6 +75,7 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/aboutus" />
 
@@ -81,12 +83,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="10dp"
                     android:gravity="left"
                     android:id="@+id/menuabout4"
                     android:text="ჩვენს შესახებ"
                     android:textColor="@android:color/white"
-                    android:textSize="@dimen/maintextsize" />
+                    android:textSize="@dimen/menutextsize" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -105,7 +107,7 @@
 
             <LinearLayout
                 android:id="@+id/lift_savefty_safety"
-                android:layout_width="@dimen/menuwidth"
+                android:layout_width="@dimen/menuwidth1"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/about_us_safety"
                 android:background="#82000000"
@@ -115,6 +117,7 @@
 
                 <ImageView
                     android:layout_width="30dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/savefty" />
@@ -123,12 +126,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="10dp"
                     android:gravity="left"
                     android:id="@+id/menusave4"
                     android:text="ლიფტის უსაფრთხოება"
                     android:textColor="@android:color/white"
-                    android:textSize="@dimen/maintextsize" />
+                    android:textSize="@dimen/menutextsize" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -146,7 +149,7 @@
 
             <LinearLayout
                 android:id="@+id/how_pay_safety"
-                android:layout_width="@dimen/menuwidth"
+                android:layout_width="@dimen/menuwidth1"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lift_savefty_safety"
                 android:orientation="horizontal"
@@ -155,6 +158,7 @@
 
                 <ImageView
                     android:layout_width="30dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/howtopay" />
@@ -163,12 +167,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="10dp"
                     android:gravity="left"
                     android:id="@+id/menupay4"
                     android:text="როგორ გადავიხადო"
                     android:textColor="@android:color/white"
-                    android:textSize="@dimen/maintextsize" />
+                    android:textSize="@dimen/menutextsize" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -187,7 +191,7 @@
 
             <LinearLayout
                 android:id="@+id/partners_safety"
-                android:layout_width="@dimen/menuwidth"
+                android:layout_width="@dimen/menuwidth1"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/how_pay_safety"
                 android:orientation="horizontal"
@@ -196,6 +200,7 @@
 
                 <ImageView
                     android:layout_width="30dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/partners" />
@@ -204,12 +209,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="10dp"
                     android:gravity="left"
                     android:id="@+id/menupartner4"
                     android:text="პარტნიორები"
                     android:textColor="@android:color/white"
-                    android:textSize="@dimen/maintextsize" />
+                    android:textSize="@dimen/menutextsize" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -266,11 +271,12 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:id="@+id/scrollsave"
                             android:orientation="vertical">
 
                             <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="200dp"
+                                android:layout_height="@dimen/savefirst"
                                 android:adjustViewBounds="true"
                                 android:padding="20dp"
                                 android:scaleType="fitXY"
@@ -279,7 +285,7 @@
 
                             <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="100dp"
+                                android:layout_height="@dimen/savesecond"
                                 android:adjustViewBounds="true"
                                 android:padding="20dp"
                                 android:scaleType="fitXY"
@@ -288,7 +294,7 @@
 
                             <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="80dp"
+                                android:layout_height="@dimen/savethird"
                                 android:adjustViewBounds="true"
                                 android:padding="20dp"
                                 android:scaleType="fitXY"
@@ -297,7 +303,7 @@
 
                             <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="150dp"
+                                android:layout_height="@dimen/save150"
                                 android:adjustViewBounds="true"
                                 android:padding="20dp"
                                 android:scaleType="fitXY"
@@ -342,7 +348,7 @@
 
                             <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="150dp"
+                                android:layout_height="@dimen/save150"
                                 android:adjustViewBounds="true"
                                 android:padding="20dp"
                                 android:scaleType="fitXY"
@@ -351,7 +357,7 @@
 
                             <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="150dp"
+                                android:layout_height="@dimen/save150"
                                 android:adjustViewBounds="true"
                                 android:padding="20dp"
                                 android:scaleType="fitXY"
@@ -360,7 +366,7 @@
 
                             <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="150dp"
+                                android:layout_height="@dimen/save150"
                                 android:adjustViewBounds="true"
                                 android:padding="20dp"
                                 android:scaleType="fitXY"
@@ -369,7 +375,7 @@
 
                             <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="150dp"
+                                android:layout_height="@dimen/save150"
                                 android:adjustViewBounds="true"
                                 android:padding="20dp"
                                 android:scaleType="fitXY"
@@ -378,7 +384,7 @@
 
                             <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="130dp"
+                                android:layout_height="@dimen/abouttextsizelast"
                                 android:adjustViewBounds="true"
                                 android:padding="20dp"
                                 android:scaleType="fitXY"
@@ -387,7 +393,7 @@
 
                             <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="150dp"
+                                android:layout_height="@dimen/save150"
                                 android:adjustViewBounds="true"
                                 android:padding="20dp"
                                 android:scaleType="fitXY"
@@ -396,7 +402,7 @@
 
                             <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="150dp"
+                                android:layout_height="@dimen/save150"
                                 android:adjustViewBounds="true"
                                 android:padding="20dp"
                                 android:scaleType="fitXY"
@@ -405,7 +411,7 @@
 
                             <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="130dp"
+                                android:layout_height="@dimen/abouttextsizelast"
                                 android:adjustViewBounds="true"
                                 android:padding="20dp"
                                 android:scaleType="fitXY"
@@ -414,7 +420,7 @@
 
                             <ImageView
                                 android:layout_width="match_parent"
-                                android:layout_height="130dp"
+                                android:layout_height="@dimen/savebolo"
                                 android:adjustViewBounds="true"
                                 android:padding="20dp"
                                 android:scaleType="fitXY"

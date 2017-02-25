@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sliderheightdev">44dp</dimen>
+    <dimen name="logomargintop">20dp</dimen>
+    <dimen name="sliderimageadf">25dp</dimen>
+    <dimen name="menumargintopa">50dp</dimen>
+</resources>

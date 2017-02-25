@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="radioHeight">50dp</dimen>
-    <dimen name="images">35dp</dimen>
+    <dimen name="images">25dp</dimen>
     <dimen name="logoSize">60dp</dimen>
     <dimen name="logoSizeH">65dp</dimen>
     <dimen name="gamodzexbaBtn">230dp</dimen>
@@ -18,4 +18,21 @@
     <dimen name="paddingedittext">20dp</dimen>
     <dimen name="slidericonsize">30dp</dimen>
     <dimen name="gamodzexebabuttontext">15dp</dimen>
+    <dimen name="menuMargin">355dp</dimen>
+    <dimen name="abouttextsize">200dp</dimen>
+    <dimen name="aboutsizecheck">170dp</dimen>
+    <dimen name="aboutSizecheckedlast">120dp</dimen>
+    <dimen name="abouttextsizelast">130dp</dimen>
+    <dimen name="savefirst">195dp</dimen>
+    <dimen name="savesecond">100dp</dimen>
+    <dimen name="savethird">80dp</dimen>
+    <dimen name="savebolo">130dp</dimen>
+    <dimen name="save150">150dp</dimen>
+    <dimen name="humburgerpad">0dp</dimen>
+    <dimen name="menumargintop">50dp</dimen>
+    <dimen name="menuwidth1">252dp</dimen>
+    <dimen name="sliderheightdev">70dp</dimen>
+    <dimen name="logomargintop">30dp</dimen>
+    <dimen name="sliderimageadf">25dp</dimen>
+    <dimen name="menumargintopa">50dp</dimen>
 </resources>
