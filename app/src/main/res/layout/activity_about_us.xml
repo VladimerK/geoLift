@@ -2,49 +2,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/DrawerLayout2"
     android:layout_width="match_parent"
-    android:background="#3e4250"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#3e4250">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <android.support.percent.PercentRelativeLayout
+            android:id="@+id/bgView2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#3e4250"
             android:gravity="right"
-            android:id="@+id/bgView2"
-            android:visibility="gone"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
 
 
             <LinearLayout
                 android:id="@+id/crash_conta_about"
-                app:layout_heightPercent="10%"
                 android:layout_width="@dimen/menuwidth1"
-                android:layout_marginTop="@dimen/menumargintop"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginTop="@dimen/menumargintop"
+                android:orientation="horizontal"
+                app:layout_heightPercent="10%">
 
 
                 <ImageView
                     android:layout_width="30dp"
-                    android:layout_marginLeft="15dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
                     android:src="@drawable/crashcaicon" />
 
                 <TextView
+                    android:id="@+id/menucrush1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:gravity="left"
-                    android:id="@+id/menucrush1"
                     android:layout_marginLeft="10dp"
+                    android:gravity="left"
                     android:text="ავარიული გამოძახება"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/menutextsize" />
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -65,27 +66,28 @@
                 android:layout_width="@dimen/menuwidth1"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/crash_conta_about"
-                android:orientation="horizontal"
                 android:background="#82000000"
+                android:orientation="horizontal"
                 app:layout_heightPercent="10%">
 
                 <ImageView
                     android:layout_width="30dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_gravity="center_vertical"
                     android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
                     android:src="@drawable/aboutus" />
 
                 <TextView
+                    android:id="@+id/menuabout1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:gravity="left"
-                    android:id="@+id/menuabout1"
-                    android:text="ჩვენს შესახებ"
                     android:layout_marginLeft="10dp"
+                    android:gravity="left"
+                    android:text="ჩვენს შესახებ"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/menutextsize" />
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -104,29 +106,30 @@
             <LinearLayout
                 android:id="@+id/lift_savefty_about"
                 android:layout_width="@dimen/menuwidth1"
-                app:layout_heightPercent="10%"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/about_us_about"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                app:layout_heightPercent="10%">
 
 
                 <ImageView
                     android:layout_width="30dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_gravity="center_vertical"
                     android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
                     android:src="@drawable/savefty" />
 
                 <TextView
+                    android:id="@+id/menusave1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:gravity="left"
-                    android:id="@+id/menusave1"
-                    android:text="ლიფტის უსაფრთხოება"
                     android:layout_marginLeft="10dp"
+                    android:gravity="left"
+                    android:text="ლიფტის უსაფრთხოება"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/menutextsize" />
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -144,30 +147,31 @@
 
             <LinearLayout
                 android:id="@+id/how_pay_about"
-                app:layout_heightPercent="10%"
                 android:layout_width="@dimen/menuwidth1"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lift_savefty_about"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                app:layout_heightPercent="10%">
 
 
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginLeft="20dp"
                     android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
                     android:src="@drawable/howtopay" />
 
                 <TextView
+                    android:id="@+id/menupay1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:gravity="left"
-                    android:id="@+id/menupay1"
                     android:layout_marginLeft="10dp"
+                    android:gravity="left"
                     android:text="როგორ გადავიხადო"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/menutextsize" />
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -186,29 +190,30 @@
             <LinearLayout
                 android:id="@+id/partners_about"
                 android:layout_width="@dimen/menuwidth1"
-                app:layout_heightPercent="10%"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/how_pay_about"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                app:layout_heightPercent="10%">
 
 
                 <ImageView
                     android:layout_width="30dp"
-                    android:layout_gravity="center_vertical"
                     android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="20dp"
                     android:src="@drawable/partners" />
 
                 <TextView
+                    android:id="@+id/menupartner1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:gravity="left"
-                    android:id="@+id/menupartner1"
-                    android:text="პარტნიორები"
                     android:layout_marginLeft="10dp"
+                    android:gravity="left"
+                    android:text="პარტნიორები"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/menutextsize" />
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -236,84 +241,311 @@
             android:visibility="visible">
 
             <ImageView
+                android:id="@+id/logoimage"
                 android:layout_width="@dimen/logoSize"
                 android:layout_height="@dimen/logoSizeH"
-                android:src="@drawable/logocopy"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="25dp"
-                android:id="@+id/logoimage"
-                android:layout_marginLeft="20dp"/>
+                android:src="@drawable/logocopy" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/logoimage">
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/activity_test_fab1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                tools:context="ge.idevelopers.Lifti.app.AboutUs">
 
-
-
-                <ScrollView
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/activity_test_fab1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/scrollabout"
-    android:orientation="vertical">
-                    <ImageView
-                        android:scaleType="fitXY"
-                        android:adjustViewBounds="true"
-                        android:scrollbars="vertical"
-                        android:src="@drawable/about_pirveli"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    tools:context="ge.idevelopers.Lifti.app.AboutUs">
+
+
+                    <ScrollView
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/abouttextsize" />
-                    <ImageView
-                        android:scaleType="fitXY"
-                        android:adjustViewBounds="true"
-                        android:scrollbars="vertical"
-                        android:src="@drawable/about_meore"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/abouttextsize" />
-                    <ImageView
-                        android:scaleType="fitXY"
-                        android:adjustViewBounds="true"
-                        android:scrollbars="vertical"
-                        android:src="@drawable/about_mesame"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/aboutsizecheck" />
-                    <ImageView
-                        android:scaleType="fitXY"
-                        android:adjustViewBounds="true"
-                        android:scrollbars="vertical"
-                        android:src="@drawable/about_meotxe"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/aboutSizecheckedlast" />
-                    <ImageView
-                        android:scaleType="fitXY"
-                        android:adjustViewBounds="true"
-                        android:scrollbars="vertical"
-                        android:src="@drawable/about_mexute"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/abouttextsizelast" />
-</LinearLayout>
-                </ScrollView>
-            </LinearLayout>
+                        android:layout_marginTop="5dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/scrolllay"
+                        android:background="#EEEEEE">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_main_about"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="@string/main_about"
+                                    android:textSize="@dimen/about_text_sizre" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/iv_abouticon_width"
+                                        android:layout_height="@dimen/iv_abouticon_height"
+                                        android:src="@drawable/check"
+                                        android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                        android:id="@+id/about_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:lineSpacingExtra="4dp"
+                                        android:text="@string/about_1"
+                                        android:textSize="@dimen/about_text_sizre" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/iv_abouticon_width"
+                                        android:layout_height="@dimen/iv_abouticon_height"
+                                        android:src="@drawable/check"
+                                        android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                        android:id="@+id/about_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:lineSpacingExtra="4dp"
+                                        android:text="@string/about_2"
+                                        android:textSize="@dimen/about_text_sizre" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="@dimen/iv_abouticon_width"
+                                        android:layout_height="@dimen/iv_abouticon_height"
+                                        android:src="@drawable/check"
+                                        android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                        android:id="@+id/about_3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:lineSpacingExtra="4dp"
+                                        android:text="@string/about_3"
+                                        android:textSize="@dimen/about_text_sizre" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:orientation="horizontal">
+
+                                  <ImageView
+                                    android:layout_width="@dimen/iv_abouticon_width"
+                                    android:layout_height="@dimen/iv_abouticon_height"
+                                    android:src="@drawable/check"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                        android:id="@+id/about_4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:lineSpacingExtra="4dp"
+                                        android:text="@string/about_4"
+                                        android:textSize="@dimen/about_text_sizre" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/iv_abouticon_width"
+                                        android:layout_height="@dimen/iv_abouticon_height"
+                                        android:src="@drawable/check"
+                                        android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                        android:id="@+id/about_5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:lineSpacingExtra="4dp"
+                                        android:text="@string/about_5"
+                                        android:textSize="@dimen/about_text_sizre" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/iv_abouticon_width"
+                                        android:layout_height="@dimen/iv_abouticon_height"
+                                        android:src="@drawable/check"
+                                        android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                        android:id="@+id/about_6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:lineSpacingExtra="4dp"
+                                        android:text="@string/about_6"
+                                        android:textSize="@dimen/about_text_sizre" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/iv_abouticon_width"
+                                        android:layout_height="@dimen/iv_abouticon_height"
+                                        android:src="@drawable/check"
+                                        android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                        android:id="@+id/about_7"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:lineSpacingExtra="4dp"
+                                        android:text="@string/about_7"
+                                        android:textSize="@dimen/about_text_sizre" />
+                                </LinearLayout>
+
+                                
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/iv_abouticon_width"
+                                        android:layout_height="@dimen/iv_abouticon_height"
+                                        android:src="@drawable/check"
+                                        android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+
+                                    <TextView
+                                        android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                        android:id="@+id/about_8"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:lineSpacingExtra="4dp"
+                                        android:text="@string/about_8"
+                                        android:textSize="@dimen/about_text_sizre" />
+                                    </LinearLayout>
+
+                                    <View
+                                        android:background="#EEEEEE"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--<LinearLayout-->
+                        <!--android:id="@+id/scrollabout"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="@dimen/abouttextsize"-->
+                        <!--android:adjustViewBounds="true"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:scrollbars="vertical"-->
+                        <!--android:src="@drawable/about_pirveli" />-->
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="@dimen/abouttextsize"-->
+                        <!--android:adjustViewBounds="true"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:scrollbars="vertical"-->
+                        <!--android:src="@drawable/about_meore" />-->
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="@dimen/aboutsizecheck"-->
+                        <!--android:adjustViewBounds="true"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:scrollbars="vertical"-->
+                        <!--android:src="@drawable/about_mesame" />-->
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="@dimen/aboutSizecheckedlast"-->
+                        <!--android:adjustViewBounds="true"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:scrollbars="vertical"-->
+                        <!--android:src="@drawable/about_meotxe" />-->
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="@dimen/abouttextsizelast"-->
+                        <!--android:adjustViewBounds="true"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:scrollbars="vertical"-->
+                        <!--android:src="@drawable/about_mexute" />-->
+                        <!--</LinearLayout>-->
+                    </ScrollView>
+                </LinearLayout>
             </LinearLayout>
 
             <RelativeLayout
                 android:id="@+id/humburger_main2"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="20dp"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:layout_alignParentRight="true">
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/humburger_32"
@@ -354,16 +586,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </RelativeLayout>
-         <!--   <LinearLayout
-                android:id="@+id/RecyclerView2"
-                android:layout_width="20dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentRight="true"
-                android:background="#00ff0000"
-                android:orientation="horizontal"
-                android:scrollbars="vertical">
+            <!--   <LinearLayout
+                   android:id="@+id/RecyclerView2"
+                   android:layout_width="20dp"
+                   android:layout_height="match_parent"
+                   android:layout_alignParentRight="true"
+                   android:background="#00ff0000"
+                   android:orientation="horizontal"
+                   android:scrollbars="vertical">
 
-            </LinearLayout>-->
+               </LinearLayout>-->
 
             <!--kodi-->
 

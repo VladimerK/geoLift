@@ -4,4 +4,5 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="sliderheightdev">50dp</dimen>
     <dimen name="menumargintopa">50dp</dimen>
+    <dimen name="iv_save_forbid">50dp</dimen>
 </resources>

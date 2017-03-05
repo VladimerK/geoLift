@@ -30,9 +30,16 @@
     <dimen name="save150">150dp</dimen>
     <dimen name="humburgerpad">0dp</dimen>
     <dimen name="menumargintop">50dp</dimen>
-    <dimen name="menuwidth1">252dp</dimen>
+    <dimen name="menuwidth1">282dp</dimen>
     <dimen name="sliderheightdev">70dp</dimen>
     <dimen name="logomargintop">30dp</dimen>
-    <dimen name="sliderimageadf">25dp</dimen>
+    <dimen name="sliderimageadf">35dp</dimen>
     <dimen name="menumargintopa">50dp</dimen>
+    <dimen name="about_text_sizre">12sp</dimen>
+    <dimen name="iv_abouticon_height">17dp</dimen>
+    <dimen name="iv_abouticon_width">15dp</dimen>
+    <dimen name="ivabout_marginright">8dp</dimen>
+    <dimen name="tv_aboutlilt_marg">3dp</dimen>
+    <dimen name="slidermargintrightleft">26dp</dimen>
+    <dimen name="iv_save_forbid">55dp</dimen>
 </resources>

@@ -14,6 +14,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import static java.lang.Integer.parseInt;
@@ -39,6 +40,15 @@ public class AboutUs extends AppCompatActivity {
     Animation rotatetwoback;
     PercentRelativeLayout bgView;
 
+    private TextView tv_main_about;
+    private TextView tv_about_1;
+    private TextView tv_about_2;
+    private TextView tv_about_3;
+    private TextView tv_about_4;
+    private TextView tv_about_5;
+    private TextView tv_about_6;
+    private TextView tv_about_7;
+    private TextView tv_about_8;
     //MENU
 
     @Override
@@ -48,11 +58,20 @@ public class AboutUs extends AppCompatActivity {
         crash_conta_safety = (LinearLayout) findViewById(R.id.crash_conta_about);
         about_us_safety = (LinearLayout) findViewById(R.id.about_us_about);
         lift_safety = (LinearLayout) findViewById(R.id.lift_savefty_about);
-        how_pay_safety= (LinearLayout) findViewById(R.id.how_pay_about);
-        partners_safety= (LinearLayout) findViewById(R.id.partners_about);
+        how_pay_safety = (LinearLayout) findViewById(R.id.how_pay_about);
+        partners_safety = (LinearLayout) findViewById(R.id.partners_about);
+        tv_main_about = (TextView) findViewById(R.id.tv_main_about);
+        tv_about_1 = (TextView) findViewById(R.id.about_1);
+        tv_about_2 = (TextView) findViewById(R.id.about_2);
+        tv_about_3 = (TextView) findViewById(R.id.about_3);
+        tv_about_4 = (TextView) findViewById(R.id.about_4);
+        tv_about_5 = (TextView) findViewById(R.id.about_5);
+        tv_about_6 = (TextView) findViewById(R.id.about_6);
+        tv_about_7 = (TextView) findViewById(R.id.about_7);
+        tv_about_8 = (TextView) findViewById(R.id.about_8);
 
         //MENU
-       // final LinearLayout linearLayout = (LinearLayout) findViewById(R.id.RecyclerView2);
+        // final LinearLayout linearLayout = (LinearLayout) findViewById(R.id.RecyclerView2);
         RelativeLayout humburger = (RelativeLayout) findViewById(R.id.humburger_main2);
         final RelativeLayout linearAbout2 = (RelativeLayout) findViewById(R.id.linear2);
         final RelativeLayout mainAbout = (RelativeLayout) findViewById(R.id.DrawerLayout2);
@@ -67,7 +86,7 @@ public class AboutUs extends AppCompatActivity {
         fadein = AnimationUtils.loadAnimation(this, R.anim.fadein);
         rotateback = AnimationUtils.loadAnimation(this, R.anim.rotateback);
         rotatetwoback = AnimationUtils.loadAnimation(this, R.anim.rotatetwoback);
-        final  View lurjixazi_crash = findViewById(R.id.lurjixazi3_crush);
+        final View lurjixazi_crash = findViewById(R.id.lurjixazi3_crush);
         final View lurjixazi_pay = findViewById(R.id.lurjixazi3_pay);
         final View lurjixazi_partners = findViewById(R.id.lurjixazi3_partners);
         final View lurjixazi_safety = findViewById(R.id.lurjixazi3_savefty);
@@ -77,38 +96,93 @@ public class AboutUs extends AppCompatActivity {
         TextView menu_save = (TextView) findViewById(R.id.menusave1);
         TextView menu_pay = (TextView) findViewById(R.id.menupay1);
         TextView menu_part = (TextView) findViewById(R.id.menupartner1);
-        Typeface type = Typeface.createFromAsset(getAssets(),"bpgphonesans.ttf");
+        Typeface type = Typeface.createFromAsset(getAssets(), "bpgphonesans.ttf");
         menu_crush.setTypeface(type);
         menu_about.setTypeface(type);
         menu_save.setTypeface(type);
         menu_pay.setTypeface(type);
         menu_part.setTypeface(type);
-        LinearLayout scrollabout = (LinearLayout) findViewById(R.id.scrollabout);
-        scrollabout.setOnTouchListener(new View.OnTouchListener() {
+
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "bpg_phone_sans.ttf");
+        tv_main_about.setTypeface(typeface);
+        tv_about_1.setTypeface(typeface);
+        tv_about_2.setTypeface(typeface);
+        tv_about_3.setTypeface(typeface);
+        tv_about_4.setTypeface(typeface);
+        tv_about_5.setTypeface(typeface);
+        tv_about_6.setTypeface(typeface);
+        tv_about_7.setTypeface(typeface);
+        tv_about_8.setTypeface(typeface);
+
+//        LinearLayout scrollabout = (LinearLayout) findViewById(R.id.scrollabout);
+//        scrollabout.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                if (isShow){
+//                    final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", 0);
+//                    final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", 0);
+//                    AnimatorSet animatorSet = new AnimatorSet();
+//                    animatorSet.playTogether(oa, oa_y);
+//                    humburger_41.startAnimation(fadein);
+//                    humburger_31.startAnimation(fadein);
+//                    humburger_11.startAnimation(rotateback);
+//                    humburger_21.startAnimation(rotatetwoback);
+//                    animatorSet.start();
+//                    isShow = false;
+//                    linearAbout2.setBackgroundColor(Color.argb(255,23,32,39));
+//                    bgView.setVisibility(View.GONE);
+//                }
+//                return false;
+//            }
+//        });
+        ScrollView scrolllay = (ScrollView) findViewById(R.id.scrolllay);
+        scrolllay.setOnTouchListener(new OnSwipeTouchListener(){
             @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                if (isShow){
-                    final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", 0);
-                    final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", 0);
-                    AnimatorSet animatorSet = new AnimatorSet();
-                    animatorSet.playTogether(oa, oa_y);
+            public void onSwipeLeft() {
+                l = mainAbout.getMeasuredWidth();
+                final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", (float) (l * 0.08));
+                final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", -(float) ((l) * 0.70));
+                AnimatorSet animatorSet = new AnimatorSet();
+                animatorSet.playTogether(oa, oa_y);
+
+                if (!isShow) {
+                    humburger_41.startAnimation(test);
+                    humburger_31.startAnimation(test);
+                    humburger_11.startAnimation(animation_first);
+                    humburger_21.startAnimation(animation_two);
+                    isShow = true;
+                    linearAbout2.setBackgroundResource(R.drawable.rounded);
+                    bgView.setVisibility(View.VISIBLE);
+                }
+                animatorSet.start();
+                super.onSwipeLeft();
+            }
+
+            @Override
+            public void onSwipeRight() {
+
+                final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", 0);
+                final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", 0);
+                AnimatorSet animatorSet = new AnimatorSet();
+                animatorSet.playTogether(oa, oa_y);
+                if (isShow) {
                     humburger_41.startAnimation(fadein);
                     humburger_31.startAnimation(fadein);
                     humburger_11.startAnimation(rotateback);
                     humburger_21.startAnimation(rotatetwoback);
-                    animatorSet.start();
                     isShow = false;
-                    linearAbout2.setBackgroundColor(Color.argb(255,23,32,39));
-                    bgView.setVisibility(View.GONE);
+                    linearAbout2.setBackgroundColor(Color.argb(255, 23, 32, 39));
                 }
-                return false;
+                animatorSet.start();
+                bgView.setVisibility(View.GONE);
+                super.onSwipeRight();
             }
         });
         linearAbout2.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
 
-                if (isShow){
+                if (isShow) {
                     final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", 0);
                     final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", 0);
                     AnimatorSet animatorSet = new AnimatorSet();
@@ -119,7 +193,7 @@ public class AboutUs extends AppCompatActivity {
                     humburger_21.startAnimation(rotatetwoback);
                     animatorSet.start();
                     isShow = false;
-                    linearAbout2.setBackgroundColor(Color.argb(255,23,32,39));
+                    linearAbout2.setBackgroundColor(Color.argb(255, 23, 32, 39));
                     bgView.setVisibility(View.GONE);
                 }
 
@@ -127,7 +201,6 @@ public class AboutUs extends AppCompatActivity {
                 return false;
             }
         });
-
 
 
         humburger.setOnClickListener(new View.OnClickListener() {
@@ -145,7 +218,7 @@ public class AboutUs extends AppCompatActivity {
                     humburger_31.startAnimation(test);
                     humburger_11.startAnimation(animation_first);
                     humburger_21.startAnimation(animation_two);
-                    isShow=true;
+                    isShow = true;
                     linearAbout2.setBackgroundResource(R.drawable.rounded);
 
                 } else {
@@ -158,8 +231,8 @@ public class AboutUs extends AppCompatActivity {
                     humburger_31.startAnimation(fadein);
                     humburger_11.startAnimation(rotateback);
                     humburger_21.startAnimation(rotatetwoback);
-                    isShow=false;
-                    linearAbout2.setBackgroundColor(Color.argb(255,23,32,39));
+                    isShow = false;
+                    linearAbout2.setBackgroundColor(Color.argb(255, 23, 32, 39));
                     bgView.setVisibility(View.GONE);
                 }
             }
@@ -195,13 +268,13 @@ public class AboutUs extends AppCompatActivity {
                 final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", 0);
                 AnimatorSet animatorSet = new AnimatorSet();
                 animatorSet.playTogether(oa, oa_y);
-                if (isShow){
+                if (isShow) {
                     humburger_41.startAnimation(fadein);
                     humburger_31.startAnimation(fadein);
                     humburger_11.startAnimation(rotateback);
                     humburger_21.startAnimation(rotatetwoback);
                     isShow = false;
-                    linearAbout2.setBackgroundColor(Color.argb(255,23,32,39));
+                    linearAbout2.setBackgroundColor(Color.argb(255, 23, 32, 39));
                 }
                 animatorSet.start();
                 bgView.setVisibility(View.GONE);
@@ -214,20 +287,20 @@ public class AboutUs extends AppCompatActivity {
             public boolean onTouch(View arg0, MotionEvent arg1) {
                 switch (arg1.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        crash_conta_safety.setBackgroundColor(Color.argb(130,0,0,0));
-                        about_us_safety.setBackgroundColor(Color.argb(0,0,0,0));
+                        crash_conta_safety.setBackgroundColor(Color.argb(130, 0, 0, 0));
+                        about_us_safety.setBackgroundColor(Color.argb(0, 0, 0, 0));
                         about_blue.setVisibility(View.GONE);
                         lurjixazi_crash.setVisibility(View.VISIBLE);
-                        Intent i = new Intent(AboutUs.this,MainActivity.class);
+                        Intent i = new Intent(AboutUs.this, MainActivity.class);
                         startActivity(i);
-                        overridePendingTransition(R.anim.alpagjf,R.anim.facead);
+                        overridePendingTransition(R.anim.alpagjf, R.anim.facead);
                         finish();
 
                         break;
                     }
-                    case MotionEvent.ACTION_CANCEL:{
+                    case MotionEvent.ACTION_CANCEL: {
                         crash_conta_safety.setBackgroundColor(parseInt(null));
-                        about_us_safety.setBackgroundColor(Color.argb(130,0,0,0));
+                        about_us_safety.setBackgroundColor(Color.argb(130, 0, 0, 0));
                         about_blue.setVisibility(View.VISIBLE);
                         lurjixazi_crash.setVisibility(View.GONE);
                         break;
@@ -244,13 +317,13 @@ public class AboutUs extends AppCompatActivity {
                 final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", 0);
                 AnimatorSet animatorSet = new AnimatorSet();
                 animatorSet.playTogether(oa, oa_y);
-                if (isShow){
+                if (isShow) {
                     humburger_41.startAnimation(fadein);
                     humburger_31.startAnimation(fadein);
                     humburger_11.startAnimation(rotateback);
                     humburger_21.startAnimation(rotatetwoback);
                     isShow = false;
-                    linearAbout2.setBackgroundColor(Color.argb(255,23,32,39));
+                    linearAbout2.setBackgroundColor(Color.argb(255, 23, 32, 39));
                 }
                 animatorSet.start();
                 bgView.setVisibility(View.GONE);
@@ -261,20 +334,20 @@ public class AboutUs extends AppCompatActivity {
             public boolean onTouch(View arg0, MotionEvent arg1) {
                 switch (arg1.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        how_pay_safety.setBackgroundColor(Color.argb(130,0,0,0));
-                        about_us_safety.setBackgroundColor(Color.argb(0,0,0,0));
+                        how_pay_safety.setBackgroundColor(Color.argb(130, 0, 0, 0));
+                        about_us_safety.setBackgroundColor(Color.argb(0, 0, 0, 0));
                         about_blue.setVisibility(View.GONE);
                         lurjixazi_pay.setVisibility(View.VISIBLE);
-                        Intent i = new Intent(AboutUs.this,HowTopay.class);
+                        Intent i = new Intent(AboutUs.this, HowTopay.class);
                         startActivity(i);
-                        overridePendingTransition(R.anim.alpagjf,R.anim.facead);
+                        overridePendingTransition(R.anim.alpagjf, R.anim.facead);
                         finish();
 
                         break;
                     }
-                    case MotionEvent.ACTION_CANCEL:{
+                    case MotionEvent.ACTION_CANCEL: {
                         how_pay_safety.setBackgroundColor(parseInt(null));
-                        about_us_safety.setBackgroundColor(Color.argb(130,0,0,0));
+                        about_us_safety.setBackgroundColor(Color.argb(130, 0, 0, 0));
                         about_blue.setVisibility(View.VISIBLE);
                         lurjixazi_pay.setVisibility(View.GONE);
                         break;
@@ -288,20 +361,20 @@ public class AboutUs extends AppCompatActivity {
             public boolean onTouch(View arg0, MotionEvent arg1) {
                 switch (arg1.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        partners_safety.setBackgroundColor(Color.argb(130,0,0,0));
-                        about_us_safety.setBackgroundColor(Color.argb(0,0,0,0));
+                        partners_safety.setBackgroundColor(Color.argb(130, 0, 0, 0));
+                        about_us_safety.setBackgroundColor(Color.argb(0, 0, 0, 0));
                         about_blue.setVisibility(View.GONE);
                         lurjixazi_partners.setVisibility(View.VISIBLE);
-                        Intent i = new Intent(AboutUs.this,Partners.class);
+                        Intent i = new Intent(AboutUs.this, Partners.class);
                         startActivity(i);
-                        overridePendingTransition(R.anim.alpagjf,R.anim.facead);
+                        overridePendingTransition(R.anim.alpagjf, R.anim.facead);
                         finish();
 
                         break;
                     }
-                    case MotionEvent.ACTION_CANCEL:{
+                    case MotionEvent.ACTION_CANCEL: {
                         about_us_safety.setBackgroundColor(parseInt(null));
-                        partners_safety.setBackgroundColor(Color.argb(130,0,0,0));
+                        partners_safety.setBackgroundColor(Color.argb(130, 0, 0, 0));
                         about_blue.setVisibility(View.VISIBLE);
                         lurjixazi_partners.setVisibility(View.GONE);
                         break;
@@ -315,20 +388,20 @@ public class AboutUs extends AppCompatActivity {
             public boolean onTouch(View arg0, MotionEvent arg1) {
                 switch (arg1.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
-                        lift_safety.setBackgroundColor(Color.argb(130,0,0,0));
-                        about_us_safety.setBackgroundColor(Color.argb(0,0,0,0));
+                        lift_safety.setBackgroundColor(Color.argb(130, 0, 0, 0));
+                        about_us_safety.setBackgroundColor(Color.argb(0, 0, 0, 0));
                         about_blue.setVisibility(View.GONE);
                         lurjixazi_safety.setVisibility(View.VISIBLE);
-                        Intent i = new Intent(AboutUs.this,Savefty.class);
+                        Intent i = new Intent(AboutUs.this, Savefty.class);
                         startActivity(i);
-                        overridePendingTransition(R.anim.alpagjf,R.anim.facead);
+                        overridePendingTransition(R.anim.alpagjf, R.anim.facead);
                         finish();
 
                         break;
                     }
-                    case MotionEvent.ACTION_CANCEL:{
+                    case MotionEvent.ACTION_CANCEL: {
                         about_us_safety.setBackgroundColor(parseInt(null));
-                        partners_safety.setBackgroundColor(Color.argb(130,0,0,0));
+                        partners_safety.setBackgroundColor(Color.argb(130, 0, 0, 0));
                         about_blue.setVisibility(View.VISIBLE);
                         lurjixazi_safety.setVisibility(View.GONE);
                         break;

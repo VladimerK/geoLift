@@ -349,6 +349,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         mainLayout.setOnTouchListener(new OnSwipeTouchListener() {
             @Override
             public void onSwipeLeft() {
@@ -877,8 +878,13 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         //makeUseOfNewLocation(locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER));
+try{
+    locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+}
+catch (Exception e){
+    e.printStackTrace();
+}
 
-     //   locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
     }
 
     private void loadStepPref() {

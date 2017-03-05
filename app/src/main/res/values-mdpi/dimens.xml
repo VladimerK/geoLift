@@ -5,4 +5,5 @@
     <dimen name="gamodzexbaBtnHeight">60dp</dimen>
     <dimen name="sliderimageadf">25dp</dimen>
     <dimen name="menumargintopa">50dp</dimen>
+    <dimen name="slidermargintrightleft">16dp</dimen>
 </resources>

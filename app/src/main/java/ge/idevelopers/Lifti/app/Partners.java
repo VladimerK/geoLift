@@ -18,6 +18,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -114,7 +115,48 @@ public class Partners extends AppCompatActivity {
                 return false;
             }
         });
+        linearLayout.setOnTouchListener(new OnSwipeTouchListener() {
+    @Override
+    public void onSwipeLeft() {
+        l = mainAbout.getMeasuredWidth();
+        final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", (float) (l * 0.08));
+        final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", -(float) ((l) * 0.70));
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playTogether(oa, oa_y);
 
+        if (!isShow) {
+            humburger_41.startAnimation(test);
+            humburger_31.startAnimation(test);
+            humburger_11.startAnimation(animation_first);
+            humburger_21.startAnimation(animation_two);
+            isShow = true;
+            bgView.setVisibility(View.VISIBLE);
+            linearAbout2.setBackgroundResource(R.drawable.rounded);
+        }
+        animatorSet.start();
+        super.onSwipeLeft();
+    }
+
+    @Override
+    public void onSwipeRight() {
+
+        final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", 0);
+        final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", 0);
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playTogether(oa, oa_y);
+        if (isShow){
+            humburger_41.startAnimation(fadein);
+            humburger_31.startAnimation(fadein);
+            humburger_11.startAnimation(rotateback);
+            humburger_21.startAnimation(rotatetwoback);
+            isShow = false;
+            linearAbout2.setBackgroundColor(Color.argb(255,23,32,39));
+        }
+        animatorSet.start();
+        bgView.setVisibility(View.GONE);
+        super.onSwipeRight();
+    }
+});
 
 
 
@@ -327,6 +369,93 @@ public class Partners extends AppCompatActivity {
         //MENU
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        LinearLayout recviewd = (LinearLayout) findViewById(R.id.recviewd);
+        ScrollView linear4 = (ScrollView) findViewById(R.id.srolipart);
+        linear4.setOnTouchListener(new OnSwipeTouchListener() {
+            @Override
+            public void onSwipeLeft() {
+                l = mainAbout.getMeasuredWidth();
+                final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", (float) (l * 0.08));
+                final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", -(float) ((l) * 0.70));
+                AnimatorSet animatorSet = new AnimatorSet();
+                animatorSet.playTogether(oa, oa_y);
+
+                if (!isShow) {
+                    humburger_41.startAnimation(test);
+                    humburger_31.startAnimation(test);
+                    humburger_11.startAnimation(animation_first);
+                    humburger_21.startAnimation(animation_two);
+                    isShow = true;
+                    bgView.setVisibility(View.VISIBLE);
+                    linearAbout2.setBackgroundResource(R.drawable.rounded);
+                }
+                animatorSet.start();
+                super.onSwipeLeft();
+            }
+
+            @Override
+            public void onSwipeRight() {
+
+                final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", 0);
+                final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", 0);
+                AnimatorSet animatorSet = new AnimatorSet();
+                animatorSet.playTogether(oa, oa_y);
+                if (isShow){
+                    humburger_41.startAnimation(fadein);
+                    humburger_31.startAnimation(fadein);
+                    humburger_11.startAnimation(rotateback);
+                    humburger_21.startAnimation(rotatetwoback);
+                    isShow = false;
+                    linearAbout2.setBackgroundColor(Color.argb(255,23,32,39));
+                }
+                animatorSet.start();
+                bgView.setVisibility(View.GONE);
+                super.onSwipeRight();
+            }
+        });
+
+        recyclerView.setOnTouchListener(new OnSwipeTouchListener() {
+            @Override
+            public void onSwipeLeft() {
+                l = mainAbout.getMeasuredWidth();
+                final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", (float) (l * 0.08));
+                final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", -(float) ((l) * 0.70));
+                AnimatorSet animatorSet = new AnimatorSet();
+                animatorSet.playTogether(oa, oa_y);
+
+                if (!isShow) {
+                    humburger_41.startAnimation(test);
+                    humburger_31.startAnimation(test);
+                    humburger_11.startAnimation(animation_first);
+                    humburger_21.startAnimation(animation_two);
+                    isShow = true;
+                    bgView.setVisibility(View.VISIBLE);
+                    linearAbout2.setBackgroundResource(R.drawable.rounded);
+                }
+                animatorSet.start();
+                super.onSwipeLeft();
+            }
+
+            @Override
+            public void onSwipeRight() {
+
+                final ObjectAnimator oa_y = ObjectAnimator.ofFloat(linearAbout2, "y", 0);
+                final ObjectAnimator oa = ObjectAnimator.ofFloat(linearAbout2, "x", 0);
+                AnimatorSet animatorSet = new AnimatorSet();
+                animatorSet.playTogether(oa, oa_y);
+                if (isShow){
+                    humburger_41.startAnimation(fadein);
+                    humburger_31.startAnimation(fadein);
+                    humburger_11.startAnimation(rotateback);
+                    humburger_21.startAnimation(rotatetwoback);
+                    isShow = false;
+                    linearAbout2.setBackgroundColor(Color.argb(255,23,32,39));
+                }
+                animatorSet.start();
+                bgView.setVisibility(View.GONE);
+                super.onSwipeRight();
+            }
+        });
         recyclerView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {

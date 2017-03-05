@@ -32,6 +32,13 @@
     <dimen name="menumargintop">70dp</dimen>
     <dimen name="menuwidth1">552dp</dimen>
     <dimen name="logomargintop">30dp</dimen>
-    <dimen name="sliderimageadf">25dp</dimen>
+    <dimen name="sliderimageadf">35dp</dimen>
     <dimen name="menumargintopa">50dp</dimen>
+    <dimen name="about_text_sizre">15sp</dimen>
+    <dimen name="iv_abouticon_height">19dp</dimen>
+    <dimen name="iv_abouticon_width">17dp</dimen>
+    <dimen name="ivabout_marginright">10dp</dimen>
+    <dimen name="tv_aboutlilt_marg">4dp</dimen>
+    <dimen name="slidermargintrightleft">16dp</dimen>
+    <dimen name="iv_save_forbid">70dp</dimen>
 </resources>

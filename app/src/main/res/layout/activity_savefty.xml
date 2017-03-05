@@ -266,166 +266,569 @@
 
                     <ScrollView
                         android:layout_width="match_parent"
+                        android:background="#EEEEEE"
+                        android:id="@+id/scrolllay1"
+                        android:layout_marginTop="5dp"
                         android:layout_height="match_parent">
 
+                        <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal">
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:id="@+id/scrollsave"
                             android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/tv_main_save"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:lineSpacingExtra="4dp"
+                                    android:textColor="#0693c2"
+                                    android:text="@string/main_save"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
+                            <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:orientation="horizontal">
 
                             <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/savefirst"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/erti" />
+                                android:layout_width="@dimen/iv_abouticon_width"
+                                android:layout_height="@dimen/iv_abouticon_height"
+                                android:src="@drawable/check"
+                                android:layout_marginRight="@dimen/ivabout_marginright"/>
 
-                            <ImageView
+                            <TextView
+                                android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                android:id="@+id/save_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lineSpacingExtra="4dp"
+                                android:text="@string/save_1"
+                                android:textSize="@dimen/about_text_sizre" />
+                        </LinearLayout>
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="@dimen/savesecond"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/ertierti" />
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/savethird"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/meores_pirveli" />
+                                <ImageView
+                                    android:layout_width="@dimen/iv_abouticon_width"
+                                    android:layout_height="@dimen/iv_abouticon_height"
+                                    android:src="@drawable/check"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
 
-                            <ImageView
+                                <TextView
+                                    android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                    android:id="@+id/save_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="@string/save_2"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="@dimen/save150"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/meores_meore" />
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="150dp"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/oris_pirveli" />
+                                <ImageView
+                                    android:layout_width="@dimen/iv_abouticon_width"
+                                    android:layout_height="@dimen/iv_abouticon_height"
+                                    android:src="@drawable/check"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
 
-                            <ImageView
+                                <TextView
+                                    android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                    android:id="@+id/save_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="@string/save_3"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="150dp"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/oris_meore" />
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="120dp"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/oris_mesame" />
+                                <ImageView
+                                    android:layout_width="@dimen/iv_abouticon_width"
+                                    android:layout_height="@dimen/iv_abouticon_height"
+                                    android:src="@drawable/check"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
 
-                            <ImageView
+                                <TextView
+                                    android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                    android:id="@+id/save_4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="@string/save_4"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="200dp"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/samis_pirveli" />
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/save150"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/samis_meore" />
+                                <ImageView
+                                    android:layout_width="@dimen/iv_abouticon_width"
+                                    android:layout_height="@dimen/iv_abouticon_height"
+                                    android:src="@drawable/check"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/save150"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/otxis_pirveli" />
+    <TextView
+    android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+    android:id="@+id/save_5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:lineSpacingExtra="4dp"
+    android:text="@string/save_5"
+    android:textSize="@dimen/about_text_sizre" />
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/save150"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/otxis_meore" />
 
-                            <ImageView
+                            </LinearLayout>
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="@dimen/save150"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/otxis_mesame" />
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/abouttextsizelast"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/xutis_pirveli" />
+                                <ImageView
+                                    android:layout_width="@dimen/iv_abouticon_width"
+                                    android:layout_height="@dimen/iv_abouticon_height"
+                                    android:src="@drawable/check"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
 
-                            <ImageView
+                                <TextView
+                                    android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                    android:id="@+id/save_6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="@string/save_6"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="@dimen/save150"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/xutis_meore" />
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/save150"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/xutis_mesame" />
+                                <ImageView
+                                    android:layout_width="@dimen/iv_abouticon_width"
+                                    android:layout_height="@dimen/iv_abouticon_height"
+                                    android:src="@drawable/check"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
 
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/abouttextsizelast"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/eqvsis_pirveli" />
+                                <TextView
+                                    android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                    android:id="@+id/save_7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="@string/save_7"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/tv_main_forbidden"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:lineSpacingExtra="4dp"
+                                    android:textColor="#0693c2"
+                                    android:text="@string/save_forbidden"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
 
-                            <ImageView
+                            <!--akrdzalva start-->
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="@dimen/savebolo"
-                                android:adjustViewBounds="true"
-                                android:padding="20dp"
-                                android:scaleType="fitXY"
-                                android:scrollbars="vertical"
-                                android:src="@drawable/eqvsis_meore" />
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/iv_save_forbid"
+                                    android:layout_height="@dimen/iv_save_forbid"
+                                    android:src="@drawable/firstimage"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+                                <TextView
+                                    android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                    android:id="@+id/save_8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="@string/save_8"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/iv_save_forbid"
+                                    android:layout_height="@dimen/iv_save_forbid"
+                                    android:src="@drawable/secondimage"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+                                <TextView
+                                    android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                    android:id="@+id/save_9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="@string/save_9"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/iv_save_forbid"
+                                    android:layout_height="@dimen/iv_save_forbid"
+                                    android:src="@drawable/thirdimage"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+                                <TextView
+                                    android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                    android:id="@+id/save_10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="@string/save_10"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/iv_save_forbid"
+                                    android:layout_height="@dimen/iv_save_forbid"
+                                    android:src="@drawable/fourthimage"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+                                <TextView
+                                    android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                    android:id="@+id/save_11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="@string/save_11"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/iv_save_forbid"
+                                    android:layout_height="@dimen/iv_save_forbid"
+                                    android:src="@drawable/fifthimage"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+                                <TextView
+                                    android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                    android:id="@+id/save_12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="@string/save_12"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/iv_save_forbid"
+                                    android:layout_height="@dimen/iv_save_forbid"
+                                    android:src="@drawable/sixthimage"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+                                <TextView
+                                    android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                    android:id="@+id/save_13"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="@string/save_13"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/iv_save_forbid"
+                                    android:layout_height="@dimen/iv_save_forbid"
+                                    android:src="@drawable/seventhimage"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+                                <TextView
+                                    android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                    android:id="@+id/save_14"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="@string/save_14"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/iv_save_forbid"
+                                    android:layout_height="@dimen/iv_save_forbid"
+                                    android:src="@drawable/eightimage"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+                                <TextView
+                                    android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                    android:id="@+id/save_15"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="@string/save_15"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/iv_save_forbid"
+                                    android:layout_height="@dimen/iv_save_forbid"
+                                    android:src="@drawable/ninthimage"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+                                <TextView
+                                    android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                    android:id="@+id/save_16"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="@string/save_16"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/iv_save_forbid"
+                                    android:layout_height="@dimen/iv_save_forbid"
+                                    android:src="@drawable/tenthimage"
+                                    android:layout_marginRight="@dimen/ivabout_marginright"/>
+
+                                <TextView
+                                    android:layout_marginTop="@dimen/tv_aboutlilt_marg"
+                                    android:id="@+id/save_17"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="@string/save_17"
+                                    android:textSize="@dimen/about_text_sizre" />
+                            </LinearLayout>
+
+                            <!--dasasruli-->
+
+
+
+
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/savefirst"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/erti" />-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/savesecond"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/ertierti" />-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/savethird"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/meores_pirveli" />-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/save150"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/meores_meore" />-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="150dp"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/oris_pirveli" />-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="150dp"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/oris_meore" />-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="120dp"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/oris_mesame" />-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="200dp"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/samis_pirveli" />-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/save150"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/samis_meore" />-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/save150"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/otxis_pirveli" />-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/save150"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/otxis_meore" />-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/save150"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/otxis_mesame" />-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/abouttextsizelast"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/xutis_pirveli" />-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/save150"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/xutis_meore" />-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/save150"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/xutis_mesame" />-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/abouttextsizelast"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/eqvsis_pirveli" />-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="@dimen/savebolo"-->
+                                <!--android:adjustViewBounds="true"-->
+                                <!--android:padding="20dp"-->
+                                <!--android:scaleType="fitXY"-->
+                                <!--android:scrollbars="vertical"-->
+                                <!--android:src="@drawable/eqvsis_meore" />-->
+                        </LinearLayout>
                         </LinearLayout>
                     </ScrollView>
                 </LinearLayout>
